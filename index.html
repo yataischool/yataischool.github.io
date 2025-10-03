@@ -1,927 +1,665 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <!-- 恶搞标题：延续“北掠帅贩太学业大实检学木交”风格 -->
-  <title>首页-北掠帅贩太学业大实检学绞</title>
-  <!-- 引入动画库：增强恶搞视觉效果 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
-  <!-- 原有样式文件 -->
+  <title>首页-北掠帅贩太学业大实检学木交</title>
   <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/jSlider.css">
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/index.css?time=1740000000000">
-  <!-- 恶搞元数据：替换正规学校信息为搞笑内容 -->
-  <meta name="title" content="北掠帅贩太学业大实检学木交（摸鱼技巧培训基地）" />
-  <meta name="keywords" content="北掠帅贩太, 窜天猴发射专业, 课堂摸鱼认证, 零食补给站, 恶搞学校官网" />
-  <meta name="description" content="北掠帅贩太学业大实检学木交——专注窜天猴精准发射、课堂摸鱼不被抓、课间零食高效补给的“双一流”恶搞学府" />
-  <!-- 第三方组件样式 -->
+  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/index.css?time=" + new Date().getTime()>
+  <meta name="title" content="北掠帅贩太学业大实检学木交" />
+  <meta name="keywords" content="北掠帅贩太学业大实检学木交, 北师大恶搞, 摸鱼学院, 窜天猴发射中心" />
+  <meta name="description" content="这里是北掠帅贩太学业大实检学木交官方网站，专注摸鱼研究与窜天猴发射技术开发！" />
   <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/swiper@7/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-  
-  <!-- 核心恶搞样式：覆盖原有风格 + 动画效果 -->
+  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/bootstrap-4.1.3.min.css">
   <style>
-    /* 页面背景：恶搞“学术”氛围 */
-    body { 
-      background: #f9f5e8 url(https://picsum.photos/2000/1000?grayscale&blur=1) no-repeat center fixed; 
-      background-size: cover;
-      overflow-x: hidden; 
+    .swiper-pagination-bullet {
+      background-color: rgba(255, 255, 255);
+      opacity: 0.5;
     }
-    /* 轮播点：恶搞配色（辣条红+蛋黄黄） */
-    .swiper-pagination-bullet { 
-      background-color: rgba(255, 215, 0, 0.8); 
-      opacity: 0.7; 
-      width: 15px; 
-      height: 15px;
+
+    .swiper-pagination-bullet-active {
+      background-color: rgba(62, 124, 57);
+      opacity: 1;
     }
-    .swiper-pagination-bullet-active { 
-      background-color: #ff4500; /* 辣条红 */
-      opacity: 1; 
-      transform: scale(1.2); 
-      box-shadow: 0 0 10px #ff4500;
+
+    /* 新增恶搞动画效果 */
+    @keyframes rocket {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
     }
-    /* 嵌入iframe容器：用于链接本页加载 */
-    #iframeContainer { 
-      display: none; 
-      padding: 20px; 
+    .rocket-animation:hover {
+      animation: rocket 0.8s ease infinite;
     }
-    #embedFrame { 
-      width: 100%; 
-      height: 800px; 
-      border: none; 
-      box-shadow: 0 0 30px rgba(255, 165, 0, 0.5); 
-      border-radius: 12px; 
-      margin: 20px auto;
+
+    /* 按钮hover效果 */
+    .nav-item {
+      transition: all 0.3s ease;
     }
-    /* 导航栏hover动画：恶搞“活跃”效果 */
-    .navbar ul li a { 
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
-      position: relative;
-      font-weight: bold;
+    .nav-item:hover {
+      color: #E30B20;
+      transform: scale(1.05);
     }
-    .navbar ul li a:hover { 
-      color: #ff4500 !important; 
-      transform: scale(1.1); 
-      text-shadow: 0 0 5px #ff4500;
+
+    /* 滚动渐显 */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .navbar ul li a::after {
-      content: ''; 
-      position: absolute; 
-      bottom: -5px; 
-      left: 0; 
-      width: 0; 
-      height: 3px; 
-      background: #ff4500; 
-      transition: width 0.3s;
-    }
-    .navbar ul li a:hover::after { width: 100%; }
-    /* 内容卡片：悬浮动画（模仿“窜天猴起飞”） */
-    .box_12, .group_10, .list-items_2-0 {
-      transition: all 0.5s ease; 
-      cursor: pointer;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .box_12:hover, .group_10:hover, .list-items_2-0:hover {
-      transform: translateY(-10px) rotate(1deg); 
-      box-shadow: 0 15px 30px rgba(255, 99, 71, 0.3);
-    }
-    /* 侧边栏：持续抖动（模仿“窜天猴预热”） */
-    .box_10 { 
-      animation: shake 3s infinite alternate; 
-      position: fixed; 
-      right: 20px; 
-      z-index: 9999;
-    }
-    @keyframes shake {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(5px); }
-    }
-    /* 轮播图恶搞文字：叠加搞笑标语 */
-    .swiper-slide {
-      position: relative;
-    }
-    .swiper-slide::after {
-      content: attr(data-funny); 
-      position: absolute; 
-      bottom: 50px; 
-      left: 50px;
-      font-size: 24px; 
-      color: #fff; 
-      text-shadow: 0 0 10px #ff0000;
-      background: rgba(0,0,0,0.6); 
-      padding: 10px 20px; 
-      border-radius: 8px;
-      animation: flash 2s infinite alternate;
-    }
-    @keyframes flash {
-      0% { opacity: 0.8; }
-      100% { opacity: 1; transform: scale(1.05); }
-    }
-    /* 按钮动画：恶搞“发射”效果 */
-    #addPassWord, .text_23, .text_41, .text_45 {
-      transition: all 0.3s; 
-      position: relative; 
-      overflow: hidden;
-      border: none !important;
-    }
-    #addPassWord:hover, .text_23:hover, .text_41:hover, .text_45:hover {
-      background: #ff4500 !important; 
-      color: #fff !important;
-      box-shadow: 0 0 15px #ff4500;
-    }
-    #addPassWord::after {
-      content: ''; 
-      position: absolute; 
-      top: 0; 
-      left: -100%; 
-      width: 100%;
-      height: 100%; 
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: left 0.5s;
-    }
-    #addPassWord:hover::after { left: 100%; }
-    /* 滚动触发动画：内容“弹入”效果 */
-    .scroll-animate { 
-      opacity: 0; 
-      transform: translateY(50px); 
-      transition: all 0.8s; 
-    }
-    .scroll-animate.active { 
-      opacity: 1; 
-      transform: translateY(0); 
-    }
-    /* 恶搞标题样式：模仿“手写学术体” */
-    .text_2, .text_24, .text_31, .text_43 {
-      font-family: "Comic Sans MS", "幼圆", sans-serif !important;
-      color: #ff4500 !important;
-      text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-      position: relative;
-    }
-    .text_2::before, .text_24::before, .text_31::before, .text_43::before {
-      content: '【恶搞】';
-      font-size: 14px;
-      color: #ff0000;
-      position: absolute;
-      left: -60px;
-      top: 50%;
-      transform: translateY(-50%);
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 
 <body>
-  <!-- 1. 嵌入链接的iframe容器（默认隐藏，用于本页加载外部链接） -->
-  <div class="container animate__animated animate__fadeIn" id="iframeContainer">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h3 class="text_2">【恶搞】内嵌页面加载中...</h3>
-      <button class="btn btn-danger" onclick="hideIframe()">关闭内嵌页面</button>
+  <script src="https://yataischool.net/r/cms/www/default/swiper@7/swiper-bundle.min.js"></script>
+  <!-- 顶部导航 -->
+<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/reset.css" />
+<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/header.css?time=" + new Date().getTime() />
+<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/icon/iconfont.css" />
+<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/fonts/iconfont.css">
+
+<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/password.css" />
+<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/jquery.my-message.1.1.css"/>
+
+<script>
+	localStorage.setItem('base', '');
+</script>
+
+<!-- IE兼容ES6基本语法 -->
+<!-- <script src="https://yataischool.net/js/browser.min.js"></script> -->
+<!-- 转换 Iterator、Generator、Set、Maps、Proxy、Reflect、
+Symbol、Promise等语法 -->
+<!-- <script src="https://yataischool.net/js/browser-polyfill.min.js"></script> -->
+<!-- ======== -->
+<!-- <script src="https://yataischool.net/r/cms/www/default/js/flexible.js"></script> -->
+<script src="https://yataischool.net/r/cms/www/default/js/jquery-1.12.4.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/sm.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/crypto-js.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/jquery.my-message.1.1.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/jquery.validate.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/jquery.page.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/chinese.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/public.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/app.js"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/permCheck.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://yataischool.net/r/cms/www/default/js/siteSurver.js"></script>
+<script>
+	setTimeout(function() {
+					siteInitTime(getUrlArg('errorLink'));
+			}, 500);
+	$.extend($.validator.messages, {
+    required: "必选字段",
+    remote: "请修正该字段",
+    email: "请输入正确格式的电子邮件",
+    url: "请输入合法的网址",
+    date: "请输入合法的日期",
+    dateISO: "请输入合法的日期 (ISO).",
+    number: "请输入合法的数字",
+    digits: "只能输入整数",
+    creditcard: "请输入合法的信用卡号",
+    equalTo: "请再次输入相同的值",
+    accept: "请输入拥有合法后缀名的字符串",
+    maxlength: $.validator.format("请输入一个长度最多是 {0} 的字符串"),
+    minlength: $.validator.format("请输入一个长度最少是 {0} 的字符串"),
+    rangelength: $.validator.format("请输入一个长度介于 {0} 和 {1} 之间的字符串"),
+    range: $.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
+    max: $.validator.format("请输入一个最大为 {0} 的值"),
+    min: $.validator.format("请输入一个最小为 {0} 的值")
+});
+</script>
+
+<!-- 顶1部 -->
+
+<script type="text/javascript">
+
+	$(function() {
+		// GOV.yuyinInit("","true");
+		// register-sso
+		function isSsoLogin (){
+			var openSso = 'false';
+			if(openSso == 'true'){
+				$('.register-sso').css('display','inline-block');
+				$('.header .typeArea .navbar ul li').css('margin-left','50px');
+			} else {
+				$('.register-sso').css('display','none');
+				$('.header .typeArea .navbar ul li').css('margin-left','40px');
+			}
+
+		}
+		// isSsoLogin();
+	})
+</script>
+
+<div class="header">
+	<div class="header_nav_box">
+		<div class="barrierBed none"></div>
+		<div class="header_nav">
+			<!-- 搜索隐藏模块展开 -->
+			<div class="search-show none">
+				<div class="search-top">
+					<div class="box">
+						<div class="title">
+							<input type="text" maxlength="150" id="headerKeyword" placeholder="请输入你要查找的内容，比如：摸鱼技巧"/>
+							<i onclick="upSearch()"  class="iconfont iconsousuo1 searchcss"></i>
+						</div>
+						<i class="iconfont iconguanbi"></i>
+					</div>
+				</div>
+			</div>
+			<div class="typeArea">
+				<div class="logo logo-index">
+					<a rel="noopener noreferrer" href="#" onclick="loadPage('home')" rel="noopener noreferrer"><img src="https://www.img520.com/jALI7Q.png" alt="北掠帅贩太学业大实检学木交"/></a>
+				</div>
+				<div class="logo logo-children">
+					<a rel="noopener noreferrer" href="#" onclick="loadPage('home')" rel="noopener noreferrer"><img src="https://www.img520.com/jALI7Q.png" alt="北掠帅贩太学业大实检学木交"/></a>
+				</div>
+				<div class="navbar navbar-index" id="navbarList">
+					<ul>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('about')" id="276" class="text-color">学校概况</a>
+							</li>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('party')" id="245" class="text-color">党建工作</a>
+							</li>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('research')" id="206" class="text-color">摸鱼科研</a>
+							</li>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('teacher')" id="246" class="text-color">教师发展</a>
+							</li>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('student')" id="247" class="text-color">学生风采</a>
+							</li>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('service')" id="249" class="text-color">校园服务</a>
+							</li>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('alumni')" id="345" class="text-color">校友会</a>
+							</li>
+							<li class="nav-item">
+							<a rel="noopener noreferrer" href="#" onclick="loadPage('admission')" id="250" class="text-color">招生招聘</a>
+							</li>
+						<li style="margin-right: 0px;margin-left: 35px;">
+							<i class="search iconfont iconsousuo1 pointer text-color"></i>
+						</li>
+						<!-- 顶部导航结构 -->
+<div class="header">
+	<div class="header_nav_box">
+		<div class="barrierBed none"></div>
+		<div class="header_nav">
+			<div class="search-show none">
+				<div class="search-top">
+					<div class="box">
+						<div class="title">
+							<input type="text" maxlength="150" id="headerKeyword" placeholder="请输入你要查找的内容"/>
+							<i onclick="upSearch()"  class="iconfont iconsousuo1 searchcss"></i>
+						</div>
+						<i class="iconfont iconguanbi"></i>
+					</div>
+				</div>
+			</div>
+			<div class="typeArea">
+				<div class="logo logo-index">
+					<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/')"><img src="https://www.img520.com/jALI7Q.png" alt=""/></a>
+				</div>
+				<div class="logo logo-children">
+					<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/')"><img src="https://www.img520.com/jALI7Q.png" alt=""/></a>
+				</div>
+				<div class="navbar navbar-index" id="navbarList">
+					<ul>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/gywm.jhtml')" id="276" class="text-color">学校概况</a>
+							</li>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/mddj1.jhtml')" id="245" class="text-color">党建工作</a>
+							</li>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/jxky.jhtml')" id="206" class="text-color">教育科研</a>
+							</li>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/jsfz.jhtml')" id="246" class="text-color">教师发展</a>
+							</li>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/xsfc.jhtml')" id="247" class="text-color">学生风采</a>
+							</li>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/xyfw.jhtml')" id="249" class="text-color">校园服务</a>
+							</li>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/xyh1.jhtml')" id="345" class="text-color">校友会</a>
+							</li>
+							<li>
+							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/zszp.jhtml')" id="250" class="text-color">招生招聘</a>
+							</li>
+						<li style="margin-right: 0px;margin-left: 35px;">
+							<i class="search iconfont iconsousuo1 pointer text-color"></i>
+						</li>
+						<li>
+							<a onclick="loadPage('https://yataischool.net/admin/')"><span class="text-color">登录</span></a>
+						</li>
+					</ul>
+					<div style="position: absolute;top: 100px;" id="navContent">
+						<div style="position: relative;">
+							<div  class="text-wrapper_25_nav flex-col" id="childNavList"></div>
+							<div style="position: absolute;right: 200px;top: 0px;">
+								<div class="group_15_nav flex-col">
+									<span class="text_99_nav" id="navName">关于我们</span>
+									<span class="paragraph_13_nav" id="txtMap2"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="function">
+				</div>
+			</div>
+		</div>
+		<div class="headerLine"></div>
+		<div class="moreBox1" style="height: 293px;">
+			<div class="moreBox1_container">
+			</div>
+		</div>
+	</div>
+	<!-- 返回顶部与悬浮功能区 -->
+	<div id="goTop" class="pointer">
+		<span>返回<br />顶部</span>
+		<i class="iconfont iconjiantousvg"></i>
+	</div>
+	<div class="box_10 pointer">
+		<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/zsxx.jhtml')">
+		  <div class="section_7 flex-row">
+			  <div class="image-text_22 flex-col justify-between">
+					<img
+						class="label_7"
+						referrerpolicy="no-referrer"
+						src="/r/cms/www/default/images/index/floating_zs.png"
+					/>
+					<span class="text-group_17">
+						招生
+						<br />
+						专栏
+					</span>
+				</div>
+			</div>
+			<div class="block_14"></div>
+		</a>
+		<div class="section_7 flex-row">
+			<div class="image-text_23 flex-col justify-between">
+				<img
+					class="image_11"
+					referrerpolicy="no-referrer"
+					src="/r/cms/www/default/images/index/floating_wechat.png"
+				/>
+				<span class="text-group_18">
+					微信
+					<br />
+					平台
+				</span>
+			</div>
+			<div class="popover-content-qrcode">
+				<img src="/r/cms/www/default/images/index/floating_qr_wechat.png" alt="">
+			</div>
+		</div>
+		<div class="block_14"></div>
+		<div class="section_7 flex-row">
+			<div class="image-text_24 flex-col justify-between">
+				<img
+					class="image_12"
+					referrerpolicy="no-referrer"
+					src="/r/cms/www/default/images/index/floating_weibo.png"
+				/>
+				<span class="text-group_19">
+					微博
+					<br />
+					平台
+				</span>
+			</div>
+			<div class="popover-content-qrcode">
+				<img src="/r/cms/www/default/images/index/floating_qr_weibo.png" alt="">
+			</div>
+		</div>
+		<div class="block_14"></div>
+		<div class="section_7 flex-row">
+			<div class="image-text_25 flex-col justify-between">
+				<img
+					class="thumbnail_4"
+					referrerpolicy="no-referrer"
+					src="/r/cms/www/default/images/index/floating_wechat_video.png"
+				/>
+				<span class="text-group_20">视频号</span>
+			</div>
+			<div class="popover-content-qrcode">
+				<img src="/r/cms/www/default/images/index/floating_qr_wechat_video.png" alt="">
+			</div>
+		</div>
+		<div class="block_14"></div>
+		<div class="section_7 flex-row">
+			<div class="image-text_26 flex-col justify-between">
+				<img
+					class="image_13"
+					referrerpolicy="no-referrer"
+					src="/r/cms/www/default/images/index/floating_tel.png"
+				/>
+				<span class="text-group_21">
+					接诉
+					<br />
+					即办
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+						<li>
+							<a href="#" onclick="showLogin()" target="_self"><span class="text-color">登录</span></a>
+						</li>
+					</ul>
+					<!-- 主体内容容器（加载内部内容用） -->
+<div id="content-placeholder" class="main-content">
+  <!-- 轮播图模块 -->
+  <div class="indexBanner">
+    <div class="bannerSwiper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- 轮播图1 -->
+          <div class="swiper-slide" data-funny="摸鱼第一原则：不被老师发现！">
+            <a onclick="loadPage('https://yataischool.net/info/1035/26138.htm')">
+              <img src="https://picsum.photos/1920/500?random=10" alt="摸鱼技巧宣传" />
+            </a>
+          </div>
+          <!-- 轮播图2 -->
+          <div class="swiper-slide" data-funny="窜天猴发射专业全球领先！">
+            <a onclick="loadPage('https://yataischool.net/info/1035/26139.htm')">
+              <img src="https://picsum.photos/1920/500?random=11" alt="窜天猴发射专业" />
+            </a>
+          </div>
+          <!-- 轮播图3 -->
+          <div class="swiper-slide" data-funny="零食补给站24小时开放！">
+            <a onclick="loadPage('https://yataischool.net/info/1035/26140.htm')">
+              <img src="https://picsum.photos/1920/500?random=12" alt="零食补给服务" />
+            </a>
+          </div>
+        </div>
+        <!-- 轮播控制器 -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
-    <iframe id="embedFrame" src=""></iframe>
   </div>
 
-  <!-- 2. 引入基础脚本 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-  <script src="https://yataischool.net/r/cms/www/default/swiper@7/swiper-bundle.min.js"> </script>
-
-  <!-- 3. 顶部导航样式引入 -->
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/reset.css" />
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/header.css?time=1740000000000" />
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/icon/iconfont.css" />
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/fonts/iconfont.css">
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/password.css" />
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/jquery.my-message.1.1.css"/>
-
-  <!-- 4. 基础存储脚本 -->
-  <script>
-    localStorage.setItem('base', '');
-    // 恶搞存储：记录“摸鱼次数”
-    if (!localStorage.getItem('moyuCount')) {
-      localStorage.setItem('moyuCount', 0);
-    }
-    // 恶搞函数：更新摸鱼次数
-    function addMoyuCount() {
-      let count = parseInt(localStorage.getItem('moyuCount')) + 1;
-      localStorage.setItem('moyuCount', count);
-      myMessage.add(`恭喜！您已累计摸鱼${count}次，可兑换“窜天猴体验券”1张`, 'success');
-    }
-  </script>
-      <!-- IE兼容脚本注释（恶搞标注） -->
-    <!-- 以下脚本用于兼容“摸鱼老电脑”，建议摸鱼党升级浏览器 -->
-    <!-- <script src="https://yataischool.net/js/browser.min.js"></script> -->
-    <!-- 转换 Iterator、Generator、Set等“摸鱼必备”语法 -->
-    <!-- <script src="https://yataischool.net/js/browser-polyfill.min.js"></script> -->
-    <!-- <script src="https://yataischool.net/r/cms/www/default/js/flexible.js"></script> -->
-    
-    <!-- 引入功能脚本（保留原有但新增恶搞逻辑） -->
-    <script src="https://yataischool.net/r/cms/www/default/js/jquery-1.12.4.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/sm.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/crypto-js.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/jquery.my-message.1.1.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/jquery.validate.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/jquery.page.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/chinese.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/public.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/app.js"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/permCheck.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://yataischool.net/r/cms/www/default/js/siteSurver.js"></script>
-
-    <!-- 页面初始化脚本（恶搞延迟提示） -->
-    <script>
-        setTimeout(function() {
-            siteInitTime(getUrlArg('errorLink'));
-            // 恶搞提示：页面加载完成，可开始摸鱼
-            myMessage.add('【摸鱼通知】页面加载完成，建议开启“上课摸鱼模式”', 'success');
-        }, 800); // 延迟800ms，模拟“摸鱼准备时间”
-
-        // 表单验证提示（全恶搞改造）
-        $.extend($.validator.messages, {
-            required: "这玩意儿必须填！不然不让摸鱼！",
-            remote: "改改改！填错了摸鱼资格会被取消！",
-            email: "邮箱格式错啦！比如 moyu@beilueshuai.com",
-            url: "网址不对！别填真实网址，会被老师发现的！",
-            date: "日期格式错啦！填今天才能摸鱼！",
-            dateISO: "日期得是ISO格式！不然摸鱼记录无效！",
-            number: "填数字！别写“一百次”这种汉字！",
-            digits: "只能填整数！摸鱼次数不能有小数点！",
-            creditcard: "信用卡号错啦！摸鱼不需要这个！",
-            equalTo: "两次输入不一样！是不是摸鱼摸昏头了？",
-            accept: "后缀名不对！只能传“摸鱼攻略.docx”！",
-            maxlength: $.validator.format("最多只能填{0}个字！话多容易被抓！"),
-            minlength: $.validator.format("最少得填{0}个字！说明写清楚点！"),
-            rangelength: $.validator.format("得填{0}到{1}个字之间！别太啰嗦也别太简洁！"),
-            range: $.validator.format("得填{0}到{1}之间的值！摸鱼次数要合理！"),
-            max: $.validator.format("最多只能填{0}！摸鱼太多会被处分！"),
-            min: $.validator.format("最少得填{0}！摸鱼太少没意义！")
-        });
-    </script>
-
-    <!-- 顶部导航核心JS（恶搞登录/导航逻辑） -->
-    <script type="text/javascript">
-        $(function() {
-            // 恶搞SSO登录：控制“摸鱼快速登录”显示
-            function isSsoLogin (){
-                var openSso = 'true'; // 强制开启摸鱼登录通道
-                if(openSso == 'true'){
-                    $('.register-sso').css('display','inline-block').text('摸鱼快速登录');
-                    $('.header .typeArea .navbar ul li').css('margin-left','50px');
-                } else {
-                    $('.register-sso').css('display','none').text('');
-                    $('.header .typeArea .navbar ul li').css('margin-left','40px');
-                }
-            }
-            isSsoLogin();
-
-            // 所有外部链接绑定“内嵌加载”（核心功能：不跳转，本页显示）
-            $(document).on('click', 'a[href^="http"]', function(e) {
-                // 排除本页链接和iframe关闭按钮
-                if($(this).attr('href').indexOf('yataischool.net') === -1 && 
-                   !$(this).hasClass('close-iframe')) {
-                    e.preventDefault(); // 阻止跳转
-                    let targetUrl = $(this).attr('href');
-                    // 显示iframe容器并加载链接
-                    $('#embedFrame').attr('src', targetUrl);
-                    $('#iframeContainer').show();
-                    // 记录摸鱼行为
-                    addMoyuCount();
-                }
-            });
-        })
-    </script>
-
-    <!-- 顶部导航HTML（全恶搞改造：导航项文字替换） -->
-    <div class="header">
-        <div class="header_nav_box">
-            <div class="barrierBed none"></div>
-            <div class="header_nav">
-                <!-- 搜索模块（恶搞提示文字） -->
-                <div class="search-show none">
-                    <div class="search-top">
-                        <div class="box">
-                            <div class="title">
-                                <input type="text" maxlength="150" id="headerKeyword" placeholder="请输入你要摸鱼的内容（如：窜天猴教程）"/>
-                                <i onclick="upSearch()"  class="iconfont iconsousuo1 searchcss"></i>
-                            </div>
-                            <i class="iconfont iconguanbi"></i>
-                            <!-- 恶搞热搜词 -->
-                            <div class="hotBot">
-                                <div class="text">摸鱼热搜词</div>
-                                <ul>
-                                    <li><a onclick="upSearch('摸鱼技巧')">摸鱼技巧</a></li>
-                                    <li><a onclick="upSearch('窜天猴发射')">窜天猴发射</a></li>
-                                    <li><a onclick="upSearch('零食藏匿')">零食藏匿</a></li>
-                                    <li><a onclick="upSearch('老师巡逻时间')">老师巡逻时间</a></li>
-                                    <li><a onclick="upSearch('课间游戏')">课间游戏</a></li>
-                                    <li><a onclick="upSearch('作业抄法')">作业抄法</a></li>
-                                    <li><a onclick="upSearch('午睡姿势')">午睡姿势</a></li>
-                                    <li><a onclick="upSearch('逃课攻略')">逃课攻略</a></li>
-                                    <li><a onclick="upSearch('考试作弊')">考试作弊（误）</a></li>
-                                    <li><a onclick="upSearch('放学路线')">放学路线</a></li>
-                                    <div class="clearfix"></div>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 导航主体（恶搞导航项） -->
-                <div class="typeArea">
-                    <!-- Logo（保留原有，但hover加提示） -->
-                    <div class="logo logo-index" title="北掠帅贩太摸鱼基地">
-                        <a href="https://yataischool.net/" rel="noopener noreferrer"><img src="https://www.img520.com/jALI7Q.png" alt="摸鱼基地Logo"/></a>
-                    </div>
-                    <div class="logo logo-children" title="摸鱼基地（缩小版）">
-                        <a href="https://yataischool.net/" rel="noopener noreferrer"><img src="https://www.img520.com/jALI7Q.png" alt="摸鱼基地小Logo"/></a>
-                    </div>
-
-                    <!-- 导航菜单（全恶搞文字替换） -->
-                    <div class="navbar navbar-index" id="navbarList">
-                        <ul>
-                            <li><a href="https://yataischool.net/gywm.jhtml" id="276" class="text-color" onclick="addMoyuCount()">摸鱼基地概况</a></li>
-                            <li><a href="https://yataischool.net/mddj1.jhtml" id="245" class="text-color" onclick="addMoyuCount()">窜天猴发射党建</a></li>
-                            <li><a href="https://yataischool.net/jxky.jhtml" id="206" class="text-color" onclick="addMoyuCount()">摸鱼技巧科研</a></li>
-                            <li><a href="https://yataischool.net/jsfz.jhtml" id="246" class="text-color" onclick="addMoyuCount()">摸鱼导师发展</a></li>
-                            <li><a href="https://yataischool.net/xsfc.jhtml" id="247" class="text-color" onclick="addMoyuCount()">摸鱼学生风采</a></li>
-                            <li><a href="https://yataischool.net/xyfw.jhtml" id="249" class="text-color" onclick="addMoyuCount()">零食补给服务</a></li>
-                            <li><a href="https://yataischool.net/xyh1.jhtml" id="345" class="text-color" onclick="addMoyuCount()">摸鱼校友会</a></li>
-                            <li><a href="https://yataischool.net/zszp.jhtml" id="250" class="text-color" onclick="addMoyuCount()">摸鱼招生招聘</a></li>
-                            
-                            <!-- 搜索按钮 -->
-                            <li style="margin-right: 0px;margin-left: 35px;">
-                                <i class="search iconfont iconsousuo1 pointer text-color" title="搜索摸鱼内容"></i>
-                            </li>
-                            <!-- 登录按钮（恶搞文字） -->
-                            <li>
-                                <a href="https://yataischool.net/admin/" target="_blank" rel="noopener noreferrer" onclick="addMoyuCount()"><span class="text-color">摸鱼账号登录</span></a>
-                            </li>
-                        </ul>
-
-                        <!-- 导航下拉内容（恶搞文字） -->
-                        <div style="position: absolute;top: 100px;" id="navContent">
-                            <div style="position: relative;">
-                                <div  class="text-wrapper_25_nav flex-col" id="childNavList"></div>
-                                <div style="position: absolute;right: 200px;top: 0px;">
-                                    <div class="group_15_nav flex-col">
-                                        <span class="text_99_nav" id="navName">摸鱼相关</span>
-                                        <span class="paragraph_12_nav" id="txtMap">摸鱼基地专注于“让每个学生都能安全摸鱼”，提供窜天猴发射、零食藏匿、课堂伪装等核心课程</span>
-                                        <div class="text-wrapper_26_nav flex-col" >
-                                            <a class="text_105_nav" id="checkDetail" onclick="addMoyuCount()">查看更多摸鱼攻略</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div  style="position: absolute;left: 315px;top: 0px;">
-                                    <div class="group_16_nav flex-col">
-                                        <div id="navImage" style="position: relative;padding-top: 50%;">
-                                            <!-- 导航下拉图片（恶搞替换：窜天猴图片） -->
-                                            <img src="https://picsum.photos/600/400?random=1" alt="摸鱼教程图" title="摸鱼教程：如何伪装看书"/>
-                                        </div>
-                                        <span class="paragraph_13_nav" id="txtMap2">摸鱼技巧：把漫画夹在课本里，老师来了立刻翻页</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 右侧功能区（恶搞文字） -->
-                    <div class="function">
-                        <a class="register-sso" title="摸鱼快速登录" href="https://yataischool.net/register.htm" onclick="addMoyuCount()"><i class=" iconfont iconicon_line_edit-1_24" ></i>摸鱼登录</a>
-                        <span class="stateUser" title="摸鱼账号状态">未登录（点击登录摸鱼）</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 导航分割线 -->
-            <div class="headerLine"></div>
-
-            <!-- 更多导航（恶搞内容） -->
-            <div class="moreBox1" style="height: 293px;">
-                <div class="moreBox1_container">
-                    <div class="block_14_nav">
-                        <div class="group_15_nav flex-col">
-                            <span class="text_99_nav" id="navName">更多摸鱼选项</span>
-                            <span class="paragraph_12_nav" id="txtMap">包含摸鱼工具下载、零食购买链接、老师巡逻时间表等</span>
-                            <div class="text-wrapper_26_nav flex-col" >
-                                <a class="text_105_nav" id="checkDetail" onclick="addMoyuCount()">查看更多摸鱼资源</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="text-wrapper_25_nav flex-col" id="childNavList">
-                                <!-- 动态加载的子导航（恶搞预设） -->
-                                <span class="text_100_nav"><a href="javascript:;" onclick="addMoyuCount()">摸鱼工具下载</a></span>
-                                <span class="text_100_nav"><a href="javascript:;" onclick="addMoyuCount()">零食购买链接</a></span>
-                                <span class="text_100_nav"><a href="javascript:;" onclick="addMoyuCount()">老师巡逻时间表</a></span>
-                                <span class="text_100_nav"><a href="javascript:;" onclick="addMoyuCount()">课堂摸鱼暗号</a></span>
-                            </div>
-                            <div class="group_16_nav flex-col">
-                                <div id="navImage">
-                                    <img src="https://picsum.photos/600/400?random=2" alt="摸鱼工具图" title="摸鱼工具：伪装成笔的手机支架"/>
-                                </div>
-                                <span class="paragraph_13_nav" id="txtMap2">摸鱼工具：伪装成笔的手机支架，支持多角度调节</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- 主体内容容器 -->
+  <div class="container">
+    <!-- 第一行：通知公告 + 学院新闻 -->
+    <div class="row mt-5">
+      <!-- 通知公告 -->
+      <div class="col-md-6 scroll-animate">
+        <div class="box_12">
+          <div class="titleBar flex-row">
+            <span class="text_23">【颗秒】通知公告</span>
+            <a onclick="loadPage('https://yataischool.net/tzgg.jhtml')" class="more">更多</a>
+          </div>
+          <ul class="list-items_2-0">
+            <li class="flex-row">
+              <span class="text_25">紧急通知：关于加强暗网文化推广的规定</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">关于举办"硕哥机长大赛"的通知</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">没人陪我打使命召唤通知</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">关于评选"最佳暗网机长"的通知</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">亚太地球Online更新公告</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <!-- 返回顶部按钮（恶搞文字） -->
-        <div id="goTop" class="pointer" onclick="addMoyuCount()">
-            <span>返回<br />摸鱼位置</span>
-            <i class="iconfont iconjiantousvg"></i>
+      <!-- 学院新闻 -->
+      <div class="col-md-6 scroll-animate">
+        <div class="box_12">
+          <div class="titleBar flex-row">
+            <span class="text_23">瓦学弟学院新闻</span>
+            <a onclick="loadPage('https://yataischool.net/xydt.jhtml')" class="more">更多</a>
+          </div>
+          <ul class="list-items_2-0">
+            <li class="flex-row">
+              <span class="text_25">我院成功研发"乌鲁鲁堵桥"获国家专利</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">我院学生在全国中小学生道观大赛中获得金奖</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">"射击游戏专业地板维修"被评为国家级**课程</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">我院与多名知名机长建立战略合作伙伴关系</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">我院举办"水杯加餐藏起来创新方法"研讨会</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+          </ul>
         </div>
-
-        <!-- 侧边栏（恶搞功能替换） -->
-        <div class="box_10 pointer">
-            <!-- 招生专栏 → 摸鱼报名 -->
-            <a href="https://yataischool.net/zsxx.jhtml" onclick="addMoyuCount()">
-              <div class="section_7 flex-row">
-                  <div class="image-text_22 flex-col justify-between">
-                        <img
-                            class="label_7"
-                            referrerpolicy="no-referrer"
-                            src="/r/cms/www/default/images/index/floating_zs.png"
-                        />
-                        <span class="text-group_17">
-                            摸鱼<br />
-                            报名
-                        </span>
-                    </div>
-                </div>
-                <div class="block_14"></div>
-            </a>
-
-            <!-- 微信平台 → 摸鱼群 -->
-            <div class="section_7 flex-row">
-                <div class="image-text_23 flex-col justify-between">
-                    <img
-                        class="image_11"
-                        referrerpolicy="no-referrer"
-                        src="/r/cms/www/default/images/index/floating_wechat.png"
-                    />
-                    <span class="text-group_18">
-                        摸鱼<br />
-                        微信群
-                    </span>
-                </div>
-                <div class="popover-content-qrcode">
-                    <img src="https://picsum.photos/200/200?random=3" alt="摸鱼群二维码" title="扫码加入摸鱼群（老师勿入）"/>
-                </div>
-            </div>
-            <div class="block_14"></div>
-
-            <!-- 微博平台 → 摸鱼超话 -->
-            <div class="section_7 flex-row">
-                <div class="image-text_24 flex-col justify-between">
-                    <img
-                        class="image_12"
-                        referrerpolicy="no-referrer"
-                        src="/r/cms/www/default/images/index/floating_weibo.png"
-                    />
-                    <span class="text-group_19">
-                        摸鱼<br />
-                        超话
-                    </span>
-                </div>
-                <div class="popover-content-qrcode">
-                    <img src="https://picsum.photos/200/200?random=4" alt="摸鱼超话二维码" title="微博摸鱼超话，分享技巧"/>
-                </div>
-            </div>
-            <div class="block_14"></div>
-
-            <!-- 视频号 → 摸鱼教程 -->
-            <div class="section_7 flex-row">
-                <div class="image-text_25 flex-col justify-between">
-                    <img
-                        class="thumbnail_4"
-                        referrerpolicy="no-referrer"
-                        src="/r/cms/www/default/images/index/floating_wechat_video.png"
-                    />
-                    <span class="text-group_20">摸鱼教程</span>
-                </div>
-                <div class="popover-content-qrcode">
-                    <img src="https://picsum.photos/200/200?random=5" alt="摸鱼教程视频号" title="视频号：摸鱼不被抓教程"/>
-                </div>
-            </div>
-            <div class="block_14"></div>
-
-            <!-- 接诉即办 → 摸鱼求助 -->
-            <div class="section_7 flex-row">
-                <div class="image-text_26 flex-col justify-between">
-                    <img
-                        class="image_13"
-                        referrerpolicy="no-referrer"
-                        src="/r/cms/www/default/images/index/floating_tel.png"
-                    />
-                    <span class="text-group_21">
-                        摸鱼<br />
-                        求助
-                    </span>
-                </div>
-                <div class="popover-content-tel">
-                    <span class="triangle-right">摸鱼求助热线：10086-摸鱼分机</span>
-                </div>
-            </div>
-            <div class="block_14"></div>
-
-            <!-- 在线留言 → 摸鱼反馈 -->
-            <a href="https://yataischool.net/zxly.jhtml" onclick="addMoyuCount()">
-                <div class="section_7 flex-row">
-                    <div class="image-text_27 flex-col justify-between">
-                        <img
-                            class="label_8"
-                            referrerpolicy="no-referrer"
-                            src="/r/cms/www/default/images/index/floating_zxly.png"
-                        />
-                        <span class="text-group_22">
-                            摸鱼<br />
-                            反馈
-                        </span>
-                    </div>
-                </div>
-                <div class="block_14"></div>
-            </a>
-
-            <!-- 回到顶部 → 回到摸鱼位 -->
-            <div class="section_7 flex-row" id="backTop" onclick="addMoyuCount()">
-                <div class="image-text_28 flex-col justify-between">
-                    <img
-                        class="label_9"
-                        referrerpolicy="no-referrer"
-                        src="/r/cms/www/default/images/index/floating_back2top.png"
-                    />
-                    <span class="text-group_23">
-                        回到<br />
-                        摸鱼位
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- 修改密码模块（恶搞文字） -->
-        <div class="mian-all">
-            <div class="all-dig"></div>
-            <div class="all-showHide">
-                <p>修改摸鱼密码（忘记密码请联系摸鱼导师）</p>
-                <div class="showHide-input">
-                    <div >
-                        <label>
-                            <span>*</span>
-                            旧摸鱼密码：
-                            <input id="oldPass" maxlength="50" type="password" placeholder="请输入旧摸鱼密码（别告诉老师）">
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <span>*</span>
-                            新摸鱼密码：
-                            <input id="newPass" maxlength="50" type="password" placeholder="新密码要包含“摸鱼”相关字符">
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <span>*</span> 确认新摸鱼密码：
-                            <input id="PlqStr" maxlength="50" type="password" placeholder="再输一遍，别记错了！">
-                        </label>
-                    </div>
-                </div>
-                <div class="all-add">
-                    <button id="addPassWord" onclick="myMessage.add('摸鱼密码修改成功！下次摸鱼记得用新密码', 'success')">完成修改</button>
-                </div>
-            </div>
-        </div>
-    </div>
-	    <!-- 轮播图模块（保留原功能，新增恶搞文字） -->
-    <div class="indexBanner">
-        <div class="bannerSwiper">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- 轮播图1：保留原链接，新增恶搞提示文字 -->
-                    <div class="swiper-slide" data-funny="摸鱼第一原则：不被老师发现！">
-                        <a href="https://yataischool.net/info/1035/26138.htm" onclick="loadInIframe(event, this.href);">
-                            <img src="https://picsum.photos/1920/500?random=10" alt="摸鱼技巧宣传" />
-                        </a>
-                    </div>
-                    <!-- 轮播图2：保留原链接，新增恶搞提示文字 -->
-                    <div class="swiper-slide" data-funny="窜天猴发射专业全球领先！">
-                        <a href="https://yataischool.net/info/1035/26139.htm" onclick="loadInIframe(event, this.href);">
-                            <img src="https://picsum.photos/1920/500?random=11" alt="窜天猴发射专业" />
-                        </a>
-                    </div>
-                    <!-- 轮播图3：保留原链接，新增恶搞提示文字 -->
-                    <div class="swiper-slide" data-funny="零食补给站24小时开放！">
-                        <a href="https://yataischool.net/info/1035/26140.htm" onclick="loadInIframe(event, this.href);">
-                            <img src="https://picsum.photos/1920/500?random=12" alt="零食补给服务" />
-                        </a>
-                    </div>
-                </div>
-                <!-- 轮播控制器 -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <!-- 主体内容容器 -->
+    <!-- 第二行：教学科研 + 学生工作 -->
+    <div class="row mt-5">
+      <!-- 教学科研 -->
+      <div class="col-md-6 scroll-animate">
+        <div class="box_12">
+          <div class="titleBar flex-row">
+            <span class="text_23">【鸭力】教学科研</span>
+            <a onclick="loadPage('https://yataischool.net/jxky.jhtml')" class="more">更多</a>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=20" alt="教学活动" />
+              <div class="text-wrapper_29">
+                <span class="text_30">SU敏冫咸月巴研究</span>
+                <span class="text_31">科研项目</span>
+              </div>
+            </div>
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=21" alt="科研成果" />
+              <div class="text-wrapper_29">
+                <span class="text_30">新型大狙藏匿技术开发</span>
+                <span class="text_31">科研项目</span>
+              </div>
+            </div>
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=22" alt="学术交流" />
+              <div class="text-wrapper_29">
+                <span class="text_30">国际快速收起水杯加餐技术研讨会</span>
+                <span class="text_31">学术活动</span>
+              </div>
+            </div>
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=23" alt="教学成果" />
+              <div class="text-wrapper_29">
+                <span class="text_30">《上课道观修炼学》教材出版</span>
+                <span class="text_31">教学成果</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 学生工作 -->
+      <div class="col-md-6 scroll-animate">
+        <div class="box_12">
+          <div class="titleBar flex-row">
+            <span class="text_23">【牢底的丫丫】学生工作</span>
+            <a onclick="loadPage('https://yataischool.net/xsgz.jhtml')" class="more">更多</a>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=24" alt="学生活动" />
+              <div class="text-wrapper_29">
+                <span class="text_30">第一届午休逃离改错大赛</span>
+                <span class="text_31">学生活动</span>
+              </div>
+            </div>
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=25" alt="社团活动" />
+              <div class="text-wrapper_29">
+                <span class="text_30">每日作业课下交流组织成立大会</span>
+                <span class="text_31">社交活动</span>
+              </div>
+            </div>
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=26" alt="志愿者活动" />
+              <div class="text-wrapper_29">
+                <span class="text_30">专业到观修炼技巧公益讲座</span>
+                <span class="text_31">志愿活动</span>
+              </div>
+            </div>
+            <div class="group_10">
+              <img src="https://picsum.photos/300/200?random=27" alt="学生风采" />
+              <div class="text-wrapper_29">
+                <span class="text_30">优秀瓦学弟风采展示</span>
+                <span class="text_31">学生风采</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第三行：招生信息 + 就业指导 -->
+    <div class="row mt-5">
+      <!-- 招生信息 -->
+      <div class="col-md-6 scroll-animate">
+        <div class="box_12">
+          <div class="titleBar flex-row">
+            <span class="text_23">【Apple学费·Android学校】招生信息</span>
+            <a onclick="loadPage('https://yataischool.net/zszp.jhtml')" class="more">更多</a>
+          </div>
+          <ul class="list-items_2-0">
+            <li class="flex-row">
+              <span class="text_25">2025年打瓦专业招生简章</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">机长发射起飞专业招生说明会</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">道观修炼专业优秀学生奖学金政策</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">CODM专业国际交流项目介绍</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">2025年**专业招生咨询方式</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 就业指导 -->
+      <div class="col-md-6 scroll-animate">
+        <div class="box_12">
+          <div class="titleBar flex-row">
+            <span class="text_23">【Android工作】就业指导</span>
+            <a onclick="loadPage('https://yataischool.net/jyzd.jhtml')" class="more">更多</a>
+          </div>
+          <ul class="list-items_2-0">
+            <li class="flex-row">
+              <span class="text_25">Android企业招聘专场即将举行</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">Android专业毕业生就业质量报告</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">2025届毕业生道观修炼技能认证开始</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">知名Apple公司来校招聘户晨风专家</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+            <li class="flex-row">
+              <span class="text_25">就业指导中心推出东贝餐饮职业规划服务</span>
+              <span class="text_26">2025-91-78</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页脚部分 -->
+  <footer class="mt-5 py-4 bg-light">
     <div class="container">
-        <!-- 第一行：通知公告 + 学院新闻 -->
-        <div class="row mt-5">
-            <!-- 通知公告（保留原功能，恶搞标题） -->
-            <div class="col-md-6 scroll-animate">
-                <div class="box_12">
-                    <div class="titleBar flex-row">
-                        <span class="text_23">【颗秒】通知公告</span>
-                        <a href="https://yataischool.net/tzgg.jhtml" class="more" onclick="loadInIframe(event, this.href);">更多</a>
-                    </div>
-                    <ul class="list-items_2-0">
-                        <li class="flex-row">
-                            <span class="text_25">紧急通知：关于加强暗网文化推广的规定</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">关于举办“硕哥机长大赛”的通知</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">没人陪我打使命召唤通知</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">关于评选“最佳暗网机长”的通知</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">亚太地球Online更新公告</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 学院新闻（保留原功能，恶搞标题） -->
-            <div class="col-md-6 scroll-animate">
-                <div class="box_12">
-                    <div class="titleBar flex-row">
-                        <span class="text_23">瓦学弟学院新闻</span>
-                        <a href="https://yataischool.net/xydt.jhtml" class="more" onclick="loadInIframe(event, this.href);">更多</a>
-                    </div>
-                    <ul class="list-items_2-0">
-                        <li class="flex-row">
-                            <span class="text_25">我院成功研发“乌鲁鲁堵桥”获国家专利</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">我院学生在全国中小学生道观大赛中获得金奖</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">“射击游戏专业地板维修”被评为国家级**课程</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">我院与多名知名机长建立战略合作伙伴关系</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">我院举办“水杯加餐藏起来创新方法”研讨会</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-center">© 2023 北掠帅贩太学业大实检学木交（摸鱼研究中心）</p>
+          <p class="text-center">地址：摸鱼大道123号 窜天猴科技园区</p>
         </div>
-
-        <!-- 第二行：教学科研 + 学生工作 -->
-        <div class="row mt-5">
-            <!-- 教学科研（保留原功能，恶搞标题） -->
-            <div class="col-md-6 scroll-animate">
-                <div class="box_12">
-                    <div class="titleBar flex-row">
-                        <span class="text_23">【鸭力】教学科研</span>
-                        <a href="https://yataischool.net/jxky.jhtml" class="more" onclick="loadInIframe(event, this.href);">更多</a>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=20" alt="教学活动" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">SU敏冫咸月巴研究</span>
-                                <span class="text_31">科研项目</span>
-                            </div>
-                        </div>
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=21" alt="科研成果" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">新型大狙藏匿技术开发</span>
-                                <span class="text_31">科研项目</span>
-                            </div>
-                        </div>
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=22" alt="学术交流" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">国际快速收起水杯加餐技术研讨会</span>
-                                <span class="text_31">学术活动</span>
-                            </div>
-                        </div>
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=23" alt="教学成果" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">《上课道观修炼学》教材出版</span>
-                                <span class="text_31">教学成果</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 学生工作（保留原功能，恶搞标题） -->
-            <div class="col-md-6 scroll-animate">
-                <div class="box_12">
-                    <div class="titleBar flex-row">
-                        <span class="text_23">【牢底的丫丫】学生工作</span>
-                        <a href="https://yataischool.net/xsgz.jhtml" class="more" onclick="loadInIframe(event, this.href);">更多</a>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=24" alt="学生活动" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">第一届午休逃离改错大赛</span>
-                                <span class="text_31">学生活动</span>
-                            </div>
-                        </div>
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=25" alt="社团活动" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">每日作业课下交流组织成立大会</span>
-                                <span class="text_31">社交活动</span>
-                            </div>
-                        </div>
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=26" alt="志愿者活动" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">专业到观修炼技巧公益讲座</span>
-                                <span class="text_31">志愿活动</span>
-                            </div>
-                        </div>
-                        <div class="group_10">
-                            <img src="https://picsum.photos/300/200?random=27" alt="学生风采" />
-                            <div class="text-wrapper_29">
-                                <span class="text_30">优秀瓦学弟风采展示</span>
-                                <span class="text_31">学生风采</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <a onclick="loadPage('https://yataischool.net/gywm.jhtml')" class="mx-2">关于我们</a>
+            <a onclick="loadPage('https://yataischool.net/xyh1.jhtml')" class="mx-2">校友会</a>
+            <a onclick="loadPage('https://yataischool.net/zxly.jhtml')" class="mx-2">在线留言</a>
+            <a onclick="loadPage('https://yataischool.net/contact.jhtml')" class="mx-2">联系方式</a>
+          </div>
         </div>
-
-        <!-- 第三行：招生信息 + 就业指导 -->
-        <div class="row mt-5">
-            <!-- 招生信息（保留原功能，恶搞标题） -->
-            <div class="col-md-6 scroll-animate">
-                <div class="box_12">
-                    <div class="titleBar flex-row">
-                        <span class="text_23">【Apple学费·Android学校】招生信息</span>
-                        <a href="https://yataischool.net/zszp.jhtml" class="more" onclick="loadInIframe(event, this.href);">更多</a>
-                    </div>
-                    <ul class="list-items_2-0">
-                        <li class="flex-row">
-                            <span class="text_25">2025年打瓦专业招生简章</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">机长发射起飞专业招生说明会</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">道观修炼专业优秀学生奖学金政策</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">CODM专业国际交流项目介绍</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">2025年**专业招生咨询方式</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 就业指导（保留原功能，恶搞标题） -->
-            <div class="col-md-6 scroll-animate">
-                <div class="box_12">
-                    <div class="titleBar flex-row">
-                        <span class="text_23">【Android工作】就业指导</span>
-                        <a href="https://yataischool.net/jyzd.jhtml" class="more" onclick="loadInIframe(event, this.href);">更多</a>
-                    </div>
-                    <ul class="list-items_2-0">
-                        <li class="flex-row">
-                            <span class="text_25">Android企业招聘专场即将举行</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">Android专业毕业生就业质量报告</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">2025届毕业生道观修炼技能认证开始</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">知名Apple公司来校招聘户晨风专家</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                        <li class="flex-row">
-                            <span class="text_25">就业指导中心推出东贝餐饮职业规划服务</span>
-                            <span class="text_26">2025-91-78</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-	    <!-- 页脚部分 -->
-    <footer class="mt-5 py-4 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="text-center">© 2023 北掠帅贩太学业大实检学木交（摸鱼研究中心）</p>
-                    <p class="text-center">地址：摸鱼大道123号 窜天猴科技园区</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="text-center">
-                        <a href="https://yataischool.net/gywm.jhtml" class="mx-2" onclick="loadInIframe(event, this.href);">关于我们</a>
-                        <a href="https://yataischool.net/xyh1.jhtml" class="mx-2" onclick="loadInIframe(event, this.href);">校友会</a>
-                        <a href="https://yataischool.net/zxly.jhtml" class="mx-2" onclick="loadInIframe(event, this.href);">在线留言</a>
-                        <a href="https://yataischool.net/contact.jhtml" class="mx-2" onclick="loadInIframe(event, this.href);">联系方式</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+  </footer>
 
-    <!-- 核心脚本 -->
-    <script>
-        // 页面加载完成后执行
-        $(document).ready(function() {
-            // 初始化轮播图
-            const swiper = new Swiper('.swiper-container', {
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                }
-            });
+  <!-- 初始化轮播图 -->
+  <script>
+    // 初始化banner轮播
+    var bannerSwiper = new Swiper('.banner-swiper', {
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true,
+    });
 
-            // 滚动动画
-            const animateElements = document.querySelectorAll('.scroll-animate');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            animateElements.forEach(el => observer.observe(el));
-
-            // 返回顶部按钮
-            $('#goTop').click(function() {
-                $('html, body').animate({ scrollTop: 0 }, 500);
-            });
-        });
-
-        // 在iframe中加载链接内容
-        function loadInIframe(event, url) {
-            event.preventDefault();
-            $('#embedFrame').attr('src', url);
-            $('#iframeContainer').show();
-            addMoyuCount();
+    // 滚动动画
+    const animateElements = document.querySelectorAll('.scroll-animate');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
         }
-
-        // 隐藏iframe容器
-        function hideIframe() {
-            $('#iframeContainer').hide();
-            $('#embedFrame').attr('src', '');
-        }
-
-        // 摸鱼次数统计
-        function addMoyuCount() {
-            let count = parseInt(localStorage.getItem('moyuCount') || 0) + 1;
-            localStorage.setItem('moyuCount', count);
-            myMessage.add(`恭喜！您已累计摸鱼${count}次，可兑换“窜天猴体验券”1张`, 'success');
-        }
-    </script>
+      });
+    }, { threshold: 0.1 });
+    
+    animateElements.forEach(el => observer.observe(el));
+  </script>
+</div>
 </body>
 </html>
+					
