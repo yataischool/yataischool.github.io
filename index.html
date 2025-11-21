@@ -1,96 +1,106 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>首页-北掠帅贩太学业大实检学木交</title>
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/jSlider.css">
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/index.css?time=" + new Date().getTime()>
-  <meta name="title" content="北掠帅贩太学业大实检学木交" />
-  <meta name="keywords" content="北掠帅贩太学业大实检学木交, 北师大恶搞, 摸鱼学院, 窜天猴发射中心" />
-  <meta name="description" content="这里是北掠帅贩太学业大实检学木交官方网站，专注摸鱼研究与窜天猴发射技术开发！" />
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/swiper@7/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/bootstrap-4.1.3.min.css">
+  <title>首页-北京师范大学亚太实验学校</title>
+  <!-- 统一配置参数 - 所有可修改项集中在此 -->
+  <script>
+    const siteConfig = {
+      baseUrl: "https://www.yataischool.net",
+      favicon: "https://yatai-oss.yataischool.net/cms/u/cms/www/202303/141559428p8f.ico",
+      meta: {
+        title: "北京师范大学亚太实验学校",
+        keywords: "北京师范大学亚太实验学校, 北师大, 亚太学校, 昌平初中",
+        description: "北京师范大学亚太实验学校"
+      },
+      navMenus: [
+        { id: "276", name: "学校概况", url: "/gywm.jhtml" },
+        { id: "245", name: "党建工作", url: "/mddj1.jhtml" },
+        { id: "206", name: "教育科研", url: "/jxky.jhtml" },
+        { id: "246", name: "教师发展", url: "/jsfz.jhtml" },
+        { id: "247", name: "学生风采", url: "/xsfc.jhtml" },
+        { id: "249", name: "校园服务", url: "/xyfw.jhtml" },
+        { id: "345", name: "校友会", url: "/xyh1.jhtml" },
+        { id: "250", name: "招生招聘", url: "/zszp.jhtml" }
+      ],
+      carousel: [
+        "https://yatai-oss.yataischool.net/u/cms/www/202510/17184141hga7.png?x-oss-process=image/resize,w_1920/quality,q_90",
+        "https://yatai-oss.yataischool.net/u/cms/www/202509/30192019swr8.png?x-oss-process=image/resize,w_1920/quality,q_90",
+        "https://yatai-oss.yataischool.net/u/cms/www/202509/11144017vqxv.png?x-oss-process=image/resize,w_1920/quality,q_90",
+        "https://yatai-oss.yataischool.net/u/cms/www/202505/22170715veqn.png?x-oss-process=image/resize,w_1920/quality,q_90",
+        "https://yatai-oss.yataischool.net/u/cms/www/202505/221707521gte.png?x-oss-process=image/resize,w_1920/quality,q_90",
+        "https://yatai-oss.yataischool.net/u/cms/www/202504/21145329kr1q.png?x-oss-process=image/resize,w_1920/quality,q_90",
+        "https://yatai-oss.yataischool.net/u/cms/www/202504/211544162pdz.png?x-oss-process=image/resize,w_1920/quality,q_90"
+      ],
+      sidebar: [
+        { name: "招生专栏", img: "/r/cms/www/default/images/index/floating_zs.png", url: "/zsxx.jhtml" },
+        { name: "微信平台", img: "/r/cms/www/default/images/index/floating_wechat.png", qr: "/r/cms/www/default/images/index/floating_qr_wechat.png" },
+        { name: "微博平台", img: "/r/cms/www/default/images/index/floating_weibo.png", qr: "/r/cms/www/default/images/index/floating_qr_weibo.png" },
+        { name: "视频号", img: "/r/cms/www/default/images/index/floating_wechat_video.png", qr: "/r/cms/www/default/images/index/floating_qr_wechat_video.png" },
+        { name: "接诉即办", img: "/r/cms/www/default/images/index/floating_tel.png", tel: "010-69755002" },
+        { name: "在线留言", img: "/r/cms/www/default/images/index/floating_zxly.png", url: "/zxly.jhtml" },
+        { name: "回到顶部", img: "/r/cms/www/default/images/index/floating_back2top.png", id: "backTop" }
+      ]
+    };
+
+    // 工具函数：拼接完整URL
+    function getFullUrl(path) {
+      return path.startsWith("http") ? path : siteConfig.baseUrl + path;
+    }
+  </script>
+  <!-- 样式文件引用 -->
+  <link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/css/jSlider.css')}">
+  <link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/css/index.css')}?time=${new Date().getTime()}">
+  <meta name="title" content="${siteConfig.meta.title}" />
+  <meta name="keywords" content="${siteConfig.meta.keywords}" />
+  <meta name="description" content="${siteConfig.meta.description}" />
+  <link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/swiper@7/swiper-bundle.min.css')}">
+  <link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/css/bootstrap-4.1.3.min.css')}">
   <style>
     .swiper-pagination-bullet {
       background-color: rgba(255, 255, 255);
       opacity: 0.5;
     }
-
     .swiper-pagination-bullet-active {
       background-color: rgba(62, 124, 57);
       opacity: 1;
     }
-
-    /* 新增恶搞动画效果 */
-    @keyframes rocket {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-    .rocket-animation:hover {
-      animation: rocket 0.8s ease infinite;
-    }
-
-    /* 按钮hover效果 */
-    .nav-item {
-      transition: all 0.3s ease;
-    }
-    .nav-item:hover {
-      color: #E30B20;
-      transform: scale(1.05);
-    }
-
-    /* 滚动渐显 */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
-
 <body>
-  <script src="https://yataischool.net/r/cms/www/default/swiper@7/swiper-bundle.min.js"></script>
-  <!-- 顶部导航 -->
-<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/reset.css" />
-<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/header.css?time=" + new Date().getTime() />
-<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/icon/iconfont.css" />
-<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/fonts/iconfont.css">
-
-<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/password.css" />
-<link rel="stylesheet" href="https://yataischool.net/r/cms/www/default/css/jquery.my-message.1.1.css"/>
+  <script src="${getFullUrl('/r/cms/www/default/swiper@7/swiper-bundle.min.js')}"> </script>
+  <!-- 顶部导航样式引用 -->
+<link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/css/reset.css')}" />
+<link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/css/header.css')}?time=${new Date().getTime()}" />
+<link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/icon/iconfont.css')}" />
+<link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/fonts/iconfont.css')}">
+<link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/css/password.css')}" />
+<link rel="stylesheet" href="${getFullUrl('/r/cms/www/default/css/jquery.my-message.1.1.css')}"/>
 
 <script>
 	localStorage.setItem('base', '');
 </script>
 
-<!-- IE兼容ES6基本语法 -->
-<!-- <script src="https://yataischool.net/js/browser.min.js"></script> -->
-<!-- 转换 Iterator、Generator、Set、Maps、Proxy、Reflect、
-Symbol、Promise等语法 -->
-<!-- <script src="https://yataischool.net/js/browser-polyfill.min.js"></script> -->
-<!-- ======== -->
-<!-- <script src="https://yataischool.net/r/cms/www/default/js/flexible.js"></script> -->
-<script src="https://yataischool.net/r/cms/www/default/js/jquery-1.12.4.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/sm.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/crypto-js.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/jquery.my-message.1.1.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/jquery.validate.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/jquery.page.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/chinese.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/public.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/app.js"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/permCheck.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://yataischool.net/r/cms/www/default/js/siteSurver.js"></script>
+<!-- 基础脚本引用 -->
+<script src="${getFullUrl('/r/cms/www/default/js/jquery-1.12.4.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/sm.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/crypto-js.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/jquery.my-message.1.1.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/jquery.validate.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/jquery.page.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/chinese.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/public.js')}" type="text/javascript" charset="utf-8"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/app.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/permCheck.js')}" type="text/javascript" charset="utf-8"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/siteSurver.js')}"></script>
+
 <script>
 	setTimeout(function() {
-					siteInitTime(getUrlArg('errorLink'));
-			}, 500);
+		siteInitTime(getUrlArg('errorLink'));
+	}, 500);
 	$.extend($.validator.messages, {
     required: "必选字段",
     remote: "请修正该字段",
@@ -112,85 +122,12 @@ Symbol、Promise等语法 -->
 });
 </script>
 
-<!-- 顶1部 -->
-
-<script type="text/javascript">
-
-	$(function() {
-		// GOV.yuyinInit("","true");
-		// register-sso
-		function isSsoLogin (){
-			var openSso = 'false';
-			if(openSso == 'true'){
-				$('.register-sso').css('display','inline-block');
-				$('.header .typeArea .navbar ul li').css('margin-left','50px');
-			} else {
-				$('.register-sso').css('display','none');
-				$('.header .typeArea .navbar ul li').css('margin-left','40px');
-			}
-
-		}
-		// isSsoLogin();
-	})
-</script>
-
+<!-- 顶部导航结构 -->
 <div class="header">
 	<div class="header_nav_box">
 		<div class="barrierBed none"></div>
 		<div class="header_nav">
-			<!-- 搜索隐藏模块展开 -->
-			<div class="search-show none">
-				<div class="search-top">
-					<div class="box">
-						<div class="title">
-							<input type="text" maxlength="150" id="headerKeyword" placeholder="请输入你要查找的内容，比如：摸鱼技巧"/>
-							<i onclick="upSearch()"  class="iconfont iconsousuo1 searchcss"></i>
-						</div>
-						<i class="iconfont iconguanbi"></i>
-					</div>
-				</div>
-			</div>
-			<div class="typeArea">
-				<div class="logo logo-index">
-					<a rel="noopener noreferrer" href="#" onclick="loadPage('home')" rel="noopener noreferrer"><img src="https://www.img520.com/jALI7Q.png" alt="北掠帅贩太学业大实检学木交"/></a>
-				</div>
-				<div class="logo logo-children">
-					<a rel="noopener noreferrer" href="#" onclick="loadPage('home')" rel="noopener noreferrer"><img src="https://www.img520.com/jALI7Q.png" alt="北掠帅贩太学业大实检学木交"/></a>
-				</div>
-				<div class="navbar navbar-index" id="navbarList">
-					<ul>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('about')" id="276" class="text-color">学校概况</a>
-							</li>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('party')" id="245" class="text-color">党建工作</a>
-							</li>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('research')" id="206" class="text-color">摸鱼科研</a>
-							</li>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('teacher')" id="246" class="text-color">教师发展</a>
-							</li>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('student')" id="247" class="text-color">学生风采</a>
-							</li>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('service')" id="249" class="text-color">校园服务</a>
-							</li>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('alumni')" id="345" class="text-color">校友会</a>
-							</li>
-							<li class="nav-item">
-							<a rel="noopener noreferrer" href="#" onclick="loadPage('admission')" id="250" class="text-color">招生招聘</a>
-							</li>
-						<li style="margin-right: 0px;margin-left: 35px;">
-							<i class="search iconfont iconsousuo1 pointer text-color"></i>
-						</li>
-						<!-- 顶部导航结构 -->
-<div class="header">
-	<div class="header_nav_box">
-		<div class="barrierBed none"></div>
-		<div class="header_nav">
+			<!-- 搜索模块 -->
 			<div class="search-show none">
 				<div class="search-top">
 					<div class="box">
@@ -203,463 +140,1085 @@ Symbol、Promise等语法 -->
 				</div>
 			</div>
 			<div class="typeArea">
+				<!-- Logo -->
 				<div class="logo logo-index">
-					<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/')"><img src="https://www.img520.com/jALI7Q.png" alt=""/></a>
+					<a rel="noopener noreferrer" href="${getFullUrl('/')}"><img src="${getFullUrl('/r/cms/www/default/images/index/logo-white.png')}" alt=""/></a>
 				</div>
 				<div class="logo logo-children">
-					<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/')"><img src="https://www.img520.com/jALI7Q.png" alt=""/></a>
+					<a rel="noopener noreferrer" href="${getFullUrl('/')}"><img src="${getFullUrl('/r/cms/www/default/images/index/logo-black.png')}" alt=""/></a>
 				</div>
+				<!-- 导航菜单 -->
 				<div class="navbar navbar-index" id="navbarList">
 					<ul>
-							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/gywm.jhtml')" id="276" class="text-color">学校概况</a>
+						<script>
+							// 动态生成导航菜单
+							siteConfig.navMenus.forEach(menu => {
+								document.write(`<li>
+									<a rel="noopener noreferrer" href="${getFullUrl(menu.url)}" id="${menu.id}" class="text-color">${menu.name}</a>
+								</li>`);
+							});
+							// 追加搜索和登录按钮
+							document.write(`<li style="margin-right: 0px;margin-left: 35px;">
+								<i class="search iconfont iconsousuo1 pointer text-color"></i>
 							</li>
 							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/mddj1.jhtml')" id="245" class="text-color">党建工作</a>
-							</li>
-							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/jxky.jhtml')" id="206" class="text-color">教育科研</a>
-							</li>
-							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/jsfz.jhtml')" id="246" class="text-color">教师发展</a>
-							</li>
-							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/xsfc.jhtml')" id="247" class="text-color">学生风采</a>
-							</li>
-							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/xyfw.jhtml')" id="249" class="text-color">校园服务</a>
-							</li>
-							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/xyh1.jhtml')" id="345" class="text-color">校友会</a>
-							</li>
-							<li>
-							<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/zszp.jhtml')" id="250" class="text-color">招生招聘</a>
-							</li>
-						<li style="margin-right: 0px;margin-left: 35px;">
-							<i class="search iconfont iconsousuo1 pointer text-color"></i>
-						</li>
-						<li>
-							<a onclick="loadPage('https://yataischool.net/admin/')"><span class="text-color">登录</span></a>
-						</li>
+								<a href="${getFullUrl('/admin/')}" target="_blank" rel="noopener noreferrer"><span class="text-color">登录</span></a>
+							</li>`);
+						</script>
 					</ul>
+					<!-- 导航下拉内容 -->
 					<div style="position: absolute;top: 100px;" id="navContent">
 						<div style="position: relative;">
-							<div  class="text-wrapper_25_nav flex-col" id="childNavList"></div>
+							<div class="text-wrapper_25_nav flex-col" id="childNavList"></div>
 							<div style="position: absolute;right: 200px;top: 0px;">
 								<div class="group_15_nav flex-col">
 									<span class="text_99_nav" id="navName">关于我们</span>
+									<span class="paragraph_12_nav" id="txtMap"></span>
+									<div class="text-wrapper_26_nav flex-col">
+										<a rel="noopener noreferrer" class="text_105_nav" id="checkDetail">查看更多</a>
+									</div>
+								</div>
+							</div>
+							<div style="position: absolute;left: 315px;top: 0px;">
+								<div class="group_16_nav flex-col">
+									<div id="navImage" style="position: relative;padding-top: 50%;"></div>
 									<span class="paragraph_13_nav" id="txtMap2"></span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="function">
-				</div>
+				<div class="function"></div>
 			</div>
 		</div>
 		<div class="headerLine"></div>
 		<div class="moreBox1" style="height: 293px;">
-			<div class="moreBox1_container">
-			</div>
+			<div class="moreBox1_container"></div>
 		</div>
 	</div>
-	<!-- 返回顶部与悬浮功能区 -->
+		<!-- 返回顶部按钮 -->
 	<div id="goTop" class="pointer">
 		<span>返回<br />顶部</span>
 		<i class="iconfont iconjiantousvg"></i>
 	</div>
+	<!-- 侧边栏 -->
 	<div class="box_10 pointer">
-		<a rel="noopener noreferrer" onclick="loadPage('https://yataischool.net/zsxx.jhtml')">
-		  <div class="section_7 flex-row">
-			  <div class="image-text_22 flex-col justify-between">
-					<img
-						class="label_7"
-						referrerpolicy="no-referrer"
-						src="/r/cms/www/default/images/index/floating_zs.png"
-					/>
-					<span class="text-group_17">
-						招生
-						<br />
-						专栏
-					</span>
+		<script>
+			// 动态生成侧边栏
+			siteConfig.sidebar.forEach(item => {
+				if (item.url) document.write(`<a rel="noopener noreferrer" href="${getFullUrl(item.url)}">`);
+				document.write(`<div class="section_7 flex-row">
+					<div class="image-text_22 flex-col justify-between">
+						<img class="label_7" referrerpolicy="no-referrer" src="${getFullUrl(item.img)}"/>
+						<span class="text-group_17">${item.name.split('').join('<br />')}</span>
+					</div>`);
+				if (item.qr) {
+					document.write(`<div class="popover-content-qrcode">
+						<img src="${getFullUrl(item.qr)}" alt="">
+					</div>`);
+				} else if (item.tel) {
+					document.write(`<div class="popover-content-tel">
+						<span class="triangle-right">${item.tel}</span>
+					</div>`);
+				}
+				document.write(`</div>`);
+				if (item.url) document.write(`</a>`);
+				if (!item.id) document.write(`<div class="block_14"></div>`);
+			});
+		</script>
+	</div>
+
+	<!-- 密码修改模块 -->
+	<div class="mian-all">
+		<div class="all-dig"></div>
+		<div class="all-showHide">
+			<p>修改密码</p>
+			<div class="showHide-input">
+				<div>
+					<label>
+						<span>*</span>旧密码：
+						<input id="oldPass" maxlength="50" type="password" placeholder="请输入旧密码">
+					</label>
+				</div>
+				<div>
+					<label>
+						<span>*</span>新密码：
+						<input id="newPass" maxlength="50" type="password" placeholder="请输入新密码">
+					</label>
+				</div>
+				<div>
+					<label>
+						<span>*</span>确认新密码：
+						<input id="PlqStr" maxlength="50" type="password" placeholder="请再次输入新密码">
+					</label>
 				</div>
 			</div>
-			<div class="block_14"></div>
-		</a>
-		<div class="section_7 flex-row">
-			<div class="image-text_23 flex-col justify-between">
-				<img
-					class="image_11"
-					referrerpolicy="no-referrer"
-					src="/r/cms/www/default/images/index/floating_wechat.png"
-				/>
-				<span class="text-group_18">
-					微信
-					<br />
-					平台
-				</span>
-			</div>
-			<div class="popover-content-qrcode">
-				<img src="/r/cms/www/default/images/index/floating_qr_wechat.png" alt="">
-			</div>
-		</div>
-		<div class="block_14"></div>
-		<div class="section_7 flex-row">
-			<div class="image-text_24 flex-col justify-between">
-				<img
-					class="image_12"
-					referrerpolicy="no-referrer"
-					src="/r/cms/www/default/images/index/floating_weibo.png"
-				/>
-				<span class="text-group_19">
-					微博
-					<br />
-					平台
-				</span>
-			</div>
-			<div class="popover-content-qrcode">
-				<img src="/r/cms/www/default/images/index/floating_qr_weibo.png" alt="">
-			</div>
-		</div>
-		<div class="block_14"></div>
-		<div class="section_7 flex-row">
-			<div class="image-text_25 flex-col justify-between">
-				<img
-					class="thumbnail_4"
-					referrerpolicy="no-referrer"
-					src="/r/cms/www/default/images/index/floating_wechat_video.png"
-				/>
-				<span class="text-group_20">视频号</span>
-			</div>
-			<div class="popover-content-qrcode">
-				<img src="/r/cms/www/default/images/index/floating_qr_wechat_video.png" alt="">
-			</div>
-		</div>
-		<div class="block_14"></div>
-		<div class="section_7 flex-row">
-			<div class="image-text_26 flex-col justify-between">
-				<img
-					class="image_13"
-					referrerpolicy="no-referrer"
-					src="/r/cms/www/default/images/index/floating_tel.png"
-				/>
-				<span class="text-group_21">
-					接诉
-					<br />
-					即办
-				</span>
+			<div class="all-add">
+				<button id="addPassWord">完成</button>
 			</div>
 		</div>
 	</div>
 </div>
-						<li>
-							<a href="#" onclick="showLogin()" target="_self"><span class="text-color">登录</span></a>
-						</li>
-					</ul>
-					<!-- 主体内容容器（加载内部内容用） -->
-<div id="content-placeholder" class="main-content">
-  <!-- 轮播图模块 -->
-  <div class="indexBanner">
-    <div class="bannerSwiper">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <!-- 轮播图1 -->
-          <div class="swiper-slide" data-funny="摸鱼第一原则：不被老师发现！">
-            <a onclick="loadPage('https://yataischool.net/info/1035/26138.htm')">
-              <img src="https://picsum.photos/1920/500?random=10" alt="摸鱼技巧宣传" />
-            </a>
-          </div>
-          <!-- 轮播图2 -->
-          <div class="swiper-slide" data-funny="窜天猴发射专业全球领先！">
-            <a onclick="loadPage('https://yataischool.net/info/1035/26139.htm')">
-              <img src="https://picsum.photos/1920/500?random=11" alt="窜天猴发射专业" />
-            </a>
-          </div>
-          <!-- 轮播图3 -->
-          <div class="swiper-slide" data-funny="零食补给站24小时开放！">
-            <a onclick="loadPage('https://yataischool.net/info/1035/26140.htm')">
-              <img src="https://picsum.photos/1920/500?random=12" alt="零食补给服务" />
-            </a>
-          </div>
-        </div>
-        <!-- 轮播控制器 -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
-  </div>
+<!-- 头部交互脚本 -->
+<script>
+	// 头部悬浮定位
+	var sTop = 0;
+	$(window).scroll(function(){
+		sTop = $(this).scrollTop();
+		if(sTop > 0){
+			$(".header").css('background','#ffffff')
+			$('.logo-index').css('display','none')
+			$('.logo-children').css('display','block')
+			$('.navbar').removeClass('navbar-index').addClass('navbar-children')
+			$('.header').removeClass('headerBox');
+		}else{
+			$(".header").css('background','none')
+			$('.logo-index').css('display','block')
+			$('.logo-children').css('display','none')
+			$('.header').addClass('headerBox');
+			$('.navbar').removeClass('navbar-children').addClass('navbar-index')
+		}
+	});
 
-  <!-- 主体内容容器 -->
-  <div class="container">
-    <!-- 第一行：通知公告 + 学院新闻 -->
-    <div class="row mt-5">
-      <!-- 通知公告 -->
-      <div class="col-md-6 scroll-animate">
-        <div class="box_12">
-          <div class="titleBar flex-row">
-            <span class="text_23">【颗秒】通知公告</span>
-            <a onclick="loadPage('https://yataischool.net/tzgg.jhtml')" class="more">更多</a>
-          </div>
-          <ul class="list-items_2-0">
-            <li class="flex-row">
-              <span class="text_25">紧急通知：关于加强暗网文化推广的规定</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">关于举办"硕哥机长大赛"的通知</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">没人陪我打使命召唤通知</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">关于评选"最佳暗网机长"的通知</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">亚太地球Online更新公告</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+	// Cookie操作函数
+	function setTCookie(c_name, value, expiredays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (expiredays*24*60*60*1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = c_name + "=" + value + "; " + expires+"; path=/";
+	}
+	function getTCookie(cname) {
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1);
+			if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+		}
+		return "";
+	}
+	function clearTCookie(name) {
+		setTCookie(name, "", -1);
+	}
 
-      <!-- 学院新闻 -->
-      <div class="col-md-6 scroll-animate">
-        <div class="box_12">
-          <div class="titleBar flex-row">
-            <span class="text_23">瓦学弟学院新闻</span>
-            <a onclick="loadPage('https://yataischool.net/xydt.jhtml')" class="more">更多</a>
-          </div>
-          <ul class="list-items_2-0">
-            <li class="flex-row">
-              <span class="text_25">我院成功研发"乌鲁鲁堵桥"获国家专利</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">我院学生在全国中小学生道观大赛中获得金奖</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">"射击游戏专业地板维修"被评为国家级**课程</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">我院与多名知名机长建立战略合作伙伴关系</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">我院举办"水杯加餐藏起来创新方法"研讨会</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+	// 加载favicon
+	var linkTag = $('<link rel="icon" type="image/x-icon" href="' + siteConfig.favicon + '"/>');
+	$($('head')[0]).append(linkTag);
 
-    <!-- 第二行：教学科研 + 学生工作 -->
-    <div class="row mt-5">
-      <!-- 教学科研 -->
-      <div class="col-md-6 scroll-animate">
-        <div class="box_12">
-          <div class="titleBar flex-row">
-            <span class="text_23">【鸭力】教学科研</span>
-            <a onclick="loadPage('https://yataischool.net/jxky.jhtml')" class="more">更多</a>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=20" alt="教学活动" />
-              <div class="text-wrapper_29">
-                <span class="text_30">SU敏冫咸月巴研究</span>
-                <span class="text_31">科研项目</span>
-              </div>
-            </div>
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=21" alt="科研成果" />
-              <div class="text-wrapper_29">
-                <span class="text_30">新型大狙藏匿技术开发</span>
-                <span class="text_31">科研项目</span>
-              </div>
-            </div>
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=22" alt="学术交流" />
-              <div class="text-wrapper_29">
-                <span class="text_30">国际快速收起水杯加餐技术研讨会</span>
-                <span class="text_31">学术活动</span>
-              </div>
-            </div>
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=23" alt="教学成果" />
-              <div class="text-wrapper_29">
-                <span class="text_30">《上课道观修炼学》教材出版</span>
-                <span class="text_31">教学成果</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+	// 登录相关函数
+	function getAuthToken() {
+		let cookies = document.cookie.split(";");
+		var str = "";
+		for(let i = 1;i<cookies.length;i++){
+			let cookie = cookies[i]
+			if (cookie.trim().startsWith("AUTHTOKEN")) {
+				str = cookie.trim().replace("AUTHTOKEN=", "")
+				break
+			}
+		}
+		return str;
+	}
+	function quitLogin() {
+		var authToken = getAuthToken()
+		api.POST('/logout', {authToken:authToken}, function (result) {
+			if (result.code === 200) {
+				myMessage.add(result.message, 'success');
+				localStorage.setItem('JEECMS-Auth-Token', '');
+				window.localStorage.setItem('paidUser',false)
+				clearTCookie('rememberMe');
+				userLoad()
+				if(window.location.href.indexOf("member-vipcenter") != -1 ){
+					document.getElementById('loginUrl').click();
+				}
+			} else {
+				myMessage.add(result.message, 'error');
+			}
+		})
+	}
+	function userLoad() {
+		$(".stateUser").load("${getFullUrl('/csi-loginStatus.htm')}")
+	}
+	userLoad()
 
-      <!-- 学生工作 -->
-      <div class="col-md-6 scroll-animate">
-        <div class="box_12">
-          <div class="titleBar flex-row">
-            <span class="text_23">【牢底的丫丫】学生工作</span>
-            <a onclick="loadPage('https://yataischool.net/xsgz.jhtml')" class="more">更多</a>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=24" alt="学生活动" />
-              <div class="text-wrapper_29">
-                <span class="text_30">第一届午休逃离改错大赛</span>
-                <span class="text_31">学生活动</span>
-              </div>
-            </div>
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=25" alt="社团活动" />
-              <div class="text-wrapper_29">
-                <span class="text_30">每日作业课下交流组织成立大会</span>
-                <span class="text_31">社交活动</span>
-              </div>
-            </div>
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=26" alt="志愿者活动" />
-              <div class="text-wrapper_29">
-                <span class="text_30">专业到观修炼技巧公益讲座</span>
-                <span class="text_31">志愿活动</span>
-              </div>
-            </div>
-            <div class="group_10">
-              <img src="https://picsum.photos/300/200?random=27" alt="学生风采" />
-              <div class="text-wrapper_29">
-                <span class="text_30">优秀瓦学弟风采展示</span>
-                <span class="text_31">学生风采</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	// 导航交互
+	$('.stateUser').on('mouseenter', function () {
+		$('.stateUser ul').stop().slideDown(500);
+	});
+	if($('.font-show2 div').length===0){
+		$('.moreBox').addClass('none')
+		$('.icoH').addClass('none')
+		$('.lineH').eq(0).addClass('none')
+	}
+	$('.stateUser').on('mouseleave', function () {
+		$('.stateUser ul').stop().slideUp(500);
+	});
+	$('.moreBox').on("mouseover",function(){$('.moreBox1').stop().slideDown(500);$('.icoH').eq(0).addClass('none');$('.icoH').eq(1).removeClass('none')})
+	$('.moreBox').on("mouseout",function(){$('.moreBox1').stop().slideUp(500);$('.icoH').eq(1).addClass('none');$('.icoH').eq(0).removeClass('none')})
 
-    <!-- 第三行：招生信息 + 就业指导 -->
-    <div class="row mt-5">
-      <!-- 招生信息 -->
-      <div class="col-md-6 scroll-animate">
-        <div class="box_12">
-          <div class="titleBar flex-row">
-            <span class="text_23">【Apple学费·Android学校】招生信息</span>
-            <a onclick="loadPage('https://yataischool.net/zszp.jhtml')" class="more">更多</a>
-          </div>
-          <ul class="list-items_2-0">
-            <li class="flex-row">
-              <span class="text_25">2025年打瓦专业招生简章</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">机长发射起飞专业招生说明会</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">道观修炼专业优秀学生奖学金政策</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">CODM专业国际交流项目介绍</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">2025年**专业招生咨询方式</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-          </ul>
-        </div>
-      </div>
+	// 头部hover效果
+	$('.header').on('mouseenter', function() {
+		$(".header").css('background','#ffffff')
+		$('.logo-index').css('display','none')
+		$('.logo-children').css('display','block')
+		$('.navbar').removeClass('navbar-index').addClass('navbar-children')
+		$('.header').removeClass('headerBox');
+	});
+	$('.header').on('mouseleave', function() {
+		if(sTop == 0){
+			$(".header").css('background','none')
+			$('.logo-index').css('display','block')
+			$('.logo-children').css('display','none')
+			$('.header').addClass('headerBox');
+			$('.navbar').removeClass('navbar-children').addClass('navbar-index')
+		}
+		$('.moreBox1').stop().slideUp(500);$("#navContent").stop().slideUp(500);
+	});
 
-      <!-- 就业指导 -->
-      <div class="col-md-6 scroll-animate">
-        <div class="box_12">
-          <div class="titleBar flex-row">
-            <span class="text_23">【Android工作】就业指导</span>
-            <a onclick="loadPage('https://yataischool.net/jyzd.jhtml')" class="more">更多</a>
-          </div>
-          <ul class="list-items_2-0">
-            <li class="flex-row">
-              <span class="text_25">Android企业招聘专场即将举行</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">Android专业毕业生就业质量报告</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">2025届毕业生道观修炼技能认证开始</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">知名Apple公司来校招聘户晨风专家</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-            <li class="flex-row">
-              <span class="text_25">就业指导中心推出东贝餐饮职业规划服务</span>
-              <span class="text_26">2025-91-78</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+	// 导航菜单下拉加载
+	$("#navbarList ul li a").on("mouseover",function(){
+		let parentId = $(this).context.id
+		if (!parentId) return
+		let _that =  $(this)
+		$('.moreBox1').stop().slideDown(500);
+		api.GET('${getFullUrl('/channel/list')}', {parentId: parentId}, function(res) {
+			let str = ''
+			if (res.code == 200) {
+				let list = res.data
+				list.map((item,index) => {
+					if(index==0 && parentId != 250){
+						_that.attr('href',item.url)
+						$("#checkDetail").attr("href", item.url)
+					}
+					if(index==0 && parentId == 250){
+						item.url = '${getFullUrl('/zszc1.jhtml?id=305')}'
+					}
+					str += '<span class="text_100_nav"><a href='+item.url+'>'+item.name+'</a></span>'
+				})
+				$("#childNavList").html(str)
+			}
+		})
+		api.GET('${getFullUrl('/channel/get')}', {id: parentId}, function(res) {
+			if (res.code == 200) {
+				$("#navName").html(res.data.name)
+				if(parentId == 250){
+					_that.attr('href','${getFullUrl('/zszc1.jhtml?id=305')}')
+					$("#checkDetail").attr("href", '${getFullUrl('/zszc1.jhtml?id=305')}')
+				}
+				let leftTxt = res.data.txtMap.txt
+				if (leftTxt != undefined && leftTxt != null) {
+					let tmp = leftTxt.replace(/<[^<>]+>/g, '')
+					if (tmp.length > 100) tmp = tmp.substring(0, 100) + '...'
+					$("#txtMap").html(tmp)
+				} else $("#txtMap").html("")
+				let rightTxt = res.data.txtMap.txt2
+				if (rightTxt != undefined && rightTxt != null) {
+					$("#txtMap2").html(rightTxt.replace(/<[^<>]+>/g, ''))
+				} else $("#txtMap2").html("")
+				$("#navImage").html('<img src='+res.data.attr.titleImg.resUrl+'?x-oss-process=image/resize,w_600/quality,q_90 />')
+			}
+		})
+		$("#navContent").stop().slideDown(500)
+	})
 
-  <!-- 页脚部分 -->
-  <footer class="mt-5 py-4 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p class="text-center">© 2023 北掠帅贩太学业大实检学木交（摸鱼研究中心）</p>
-          <p class="text-center">地址：摸鱼大道123号 窜天猴科技园区</p>
-        </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <a onclick="loadPage('https://yataischool.net/gywm.jhtml')" class="mx-2">关于我们</a>
-            <a onclick="loadPage('https://yataischool.net/xyh1.jhtml')" class="mx-2">校友会</a>
-            <a onclick="loadPage('https://yataischool.net/zxly.jhtml')" class="mx-2">在线留言</a>
-            <a onclick="loadPage('https://yataischool.net/contact.jhtml')" class="mx-2">联系方式</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+	// 搜索功能
+	function upSearch(q) {
+		var keyWords = q?encodeURI(q):''
+		var inpVal = encodeURI($('#headerKeyword').val())
+		var headerKeyword = keyWords||inpVal
+		window.open('${getFullUrl('/search.htm')}?q=' + headerKeyword);
+	}
+	$("#headerKeyword").keypress(function (e) {
+		if (e.which == 13) {
+			var headerKeyword = encodeURI($('#headerKeyword').val())
+			window.open('${getFullUrl('/search.htm')}?q=' + headerKeyword);
+		}
+	});
 
-  <!-- 初始化轮播图 -->
-  <script>
-    // 初始化banner轮播
-    var bannerSwiper = new Swiper('.banner-swiper', {
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      loop: true,
-    });
+	// 回到顶部
+	$(function () {
+		var sTop = 0;
+		$(window).scroll(function () {
+			sTop = $(this).scrollTop();
+			if (sTop > 60) {
+				$(".box_10").show()
+			} else {
+				$(".box_10").hide()
+			}
+		});
+		$('#backTop').click(function () {
+			$body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $(
+					'html,body');
+			$body.animate({scrollTop: 0}, 0);
+		});
+	})
+</script>
+<a id="loginUrl" href="${getFullUrl('/login')}" style="display: none" target="_self"></a>
 
-    // 滚动动画
-    const animateElements = document.querySelectorAll('.scroll-animate');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    animateElements.forEach(el => observer.observe(el));
-  </script>
+<!-- 中部轮播图模块 -->
+<div class="section">
+	<div class="typeArea">
+		<div class="lunbo">
+			<div class="swiper-1" style="position: absolute;top: 0;left: 0;height: 100%;width: 100%;">
+				<div class="swiper-wrapper">
+					<script>
+						// 动态生成轮播图
+						siteConfig.carousel.forEach(img => {
+							document.write(`<div class="swiper-slide" style="height: 100%;background-image: url(${img});background-size: cover;"></div>`);
+						});
+					</script>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="swiper-button-next swiper-button-next-1"></div>
+			<div class="swiper-button-prev swiper-button-prev-1"></div>
+		</div>
+				<!-- 新闻动态模块 -->
+		<div id="m_news">
+			<div class="hot block_17 flex-col">
+				<div class="block_container container-bottom">
+					<div class="text-group_24 flex-col">
+						<p class="text_2">新闻动态</p>
+						<p class="text_1">News&nbsp;Information</p>
+					</div>
+					<div class="box_11 flex-row">
+						<!-- 主要新闻 -->
+						<div class="box_12">
+							<a href="${getFullUrl('/jyjx1/3751.jhtml')}">
+								<div class="image_1_box" style="width: 100%;height: auto;overflow: hidden;">
+									<img class="image_1" referrerpolicy="no-referrer" src="https://yatai-oss.yataischool.net/u/cms/www/202511/09144952mmgp.jpg?x-oss-process=image/resize,w_1920/quality,q_90">
+								</div>
+								<div class="group_3 flex-col">
+									<div class="text-group_25 flex-col justify-between">
+										<span class="text_3">我校教师在第九届“励耘杯”青年教师教学大赛上喜获佳绩</span>
+									</div>
+									<div class="section_1 flex-col"></div>
+									<div class="box_13 flex-row justify-between">
+										<span class="text_5">2025.11.10</span>
+										<div class="text-wrapper_1 flex-col">
+											<span class="text_6">查看详情</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- 新闻列表 -->
+						<div class="ranking">
+							<ul id="hotList">
+								<a href="${getFullUrl('/jyjx1/3750.jhtml')}">
+									<li>
+										<div class="rank-img fl" style="background-image: url(https://yatai-oss.yataischool.net/u/cms/www/202511/09144414ylvz.jpg?x-oss-process=image/resize,w_1920/quality,q_90);"></div>
+										<div class="block_flex">
+											<p class="text fl news-title-text">三年磨剑终出鞘！我校初中男子篮球队斩获2025年北京市西城...</p>
+											<div class="block_4 flex-col">
+												<img class="image_3" referrerpolicy="no-referrer" src="https://yatai-oss.yataischool.net/cms/u/cms/www/202304/021857278g7c.png">
+											</div>
+											<div class="box_16 flex-row justify-between">
+												<span class="text_5">2025.11.10</span>
+												<div class="text-wrapper_1 flex-col">
+													<span class="text_6">查看详情</span>
+												</div>
+											</div>
+										</div>
+									</li>
+								</a>
+								<a href="${getFullUrl('/jyjx1/3669.jhtml')}">
+									<li>
+										<div class="rank-img fl" style="background-image: url(https://yatai-oss.yataischool.net/u/cms/www/202511/02230230b2a1.jpg?x-oss-process=image/resize,w_1920/quality,q_90);"></div>
+										<div class="block_flex">
+											<p class="text fl news-title-text">鼓号铿锵少年志，红心向党绽芳华</p>
+											<div class="block_4 flex-col">
+												<img class="image_3" referrerpolicy="no-referrer" src="https://yatai-oss.yataischool.net/cms/u/cms/www/202304/02193343ofk9.png">
+											</div>
+											<div class="box_16 flex-row justify-between">
+												<span class="text_5">2025.11.03</span>
+												<div class="text-wrapper_1 flex-col">
+													<span class="text_6">查看详情</span>
+												</div>
+											</div>
+										</div>
+									</li>
+								</a>
+								<a href="${getFullUrl('/jyjx1/3668.jhtml')}">
+									<li>
+										<div class="rank-img fl" style="background-image: url(https://yatai-oss.yataischool.net/u/cms/www/202511/022258344v58.jpg?x-oss-process=image/resize,w_1920/quality,q_90);"></div>
+										<div class="block_flex">
+											<p class="text fl news-title-text">基建维修部多点发力，筑牢校园保障防线</p>
+											<div class="block_4 flex-col">
+												<img class="image_3" referrerpolicy="no-referrer" src="https://yatai-oss.yataischool.net/cms/u/cms/www/202304/0219335127mx.png">
+											</div>
+											<div class="box_16 flex-row justify-between">
+												<span class="text_5">2025.11.03</span>
+												<div class="text-wrapper_1 flex-col">
+													<span class="text_6">查看详情</span>
+												</div>
+											</div>
+										</div>
+									</li>
+								</a>
+							</ul>
+						</div>
+					</div>
+					<div class="text-wrapper_6 flex-col">
+						<a class="text_23" rel="noopener noreferrer" href="${getFullUrl('/ytxw.jhtml')}">查看更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 教育科研模块 -->
+		<div id="m_eduresearch">
+			<div class="group_8_wrapper">
+				<div class="group_8_container">
+					<div class="group_8">
+						<div class="group_8_child">
+							<img src="https://yatai-oss.yataischool.net/cms/u/cms/www/202304/0219222885al.png" alt="" style="position: absolute;top: 0;left: 0;width:auto;height: 100%;">
+							<div class="group_8_content flex-row">
+								<div class="list_1 flex-col">
+									<div class="text-group_26 flex-col justify-between">
+										<span class="text_24">教育科研</span>
+										<span class="text_25">Educational&nbsp;Research</span>
+									</div>
+									<span class="text_27">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学校科研部以“探索教育教学规律、提升立德树人实效”为核心目标，以“传承学校严谨、专业、科学的办学精神，发展和巩固学校办学成果、特色，不断提升教师研究水平和教育实践能力，提高学校学术品质和核心竞争力”为主要任务，协同学校教育教学、教研和培训，充分发挥教育科研对教师专业成长和学校内涵发展的引领、支持和服务功能。
+									</span>
+									<div class="text-wrapper_7 flex-col">
+										<a class="text_41" rel="noopener noreferrer" href="${getFullUrl('/kyxm.jhtml')}">查看更多</a>
+									</div>
+								</div>
+								<div class="list_2 flex-row">
+									<div class="list-item-box">
+										<a rel="noopener noreferrer" href="${getFullUrl('/kyxm/2867.jhtml')}">
+											<div class="list-items_2-0 flex-col" style="background-image: url(${getFullUrl('/r/cms/www/default/images/index/list-items_2-0.png')});">
+												<div class="text-group_27-0 flex-col">
+													<span class="paragraph_8-0">《小学拔尖创新人才培养课程整体设计与落实》</span>
+												</div>
+												<div class="text-wrapper_18-0 flex-col">
+													<span class="text_87-0">查看详情</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="list-item-box">
+										<a rel="noopener noreferrer" href="${getFullUrl('/kyxm/2866.jhtml')}">
+											<div class="list-items_2-0 flex-col" style="background-image: url(${getFullUrl('/r/cms/www/default/images/index/list-items_2-1.png')});">
+												<div class="text-group_27-0 flex-col">
+													<span class="paragraph_8-0">《依托常态体育课促进拔尖创新人才培养的实践探索》</span>
+												</div>
+												<div class="text-wrapper_18-0 flex-col">
+													<span class="text_87-0">查看详情</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="list-item-box">
+										<a rel="noopener noreferrer" href="${getFullUrl('/kyxm/2865.jhtml')}">
+											<div class="list-items_2-0 flex-col" style="background-image: url(${getFullUrl('/r/cms/www/default/images/index/list-items_2-2.png')});">
+												<div class="text-group_27-0 flex-col">
+													<span class="paragraph_8-0">《基于创新素养培育的初中跨学科主题学习探索与实践》</span>
+												</div>
+												<div class="text-wrapper_18-0 flex-col">
+													<span class="text_87-0">查看详情</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-- 通知公告模块 -->
+		<div id="m_notice">
+			<div class="block_17">
+				<div class="block_container">
+					<div class="block_17_content">
+						<div class="text-group_28 flex-col justify-between">
+							<span class="text_31">通知公告</span>
+							<span class="text_32">Notice</span>
+						</div>
+						<div class="box_20 flex-row justify-evenly">
+							<a href="${getFullUrl('/tzgg/3760.jhtml')}">
+								<div class="group_10 flex-col">
+									<div class="box_21 flex-row">
+										<span class="paragraph_3">北京师范大学亚太实验学校2026年教职工补充医疗保险项目比选公告（第二次）</span>
+									</div>
+									<div class="box_22 flex-row">
+										<span class="paragraph_4">
+											本项目于2025年11月3日于学校官网进行比选公告，至报名截止日，有效参选单位不足三家（未通过资格审查属于无效参选），现进行第二轮公示，符合条件的单位可报名参加比选。&nbsp; &nbsp; &nbsp;一、比选单位：北京师范大学亚太实验学校&nbsp; &nbsp; &nbsp;二、项目名称：2026年教职工补充医疗保险项目&nbsp; &nbsp; &nbsp;三、项目基本情况及投标要求：北京师范大学亚太实验学校一直以来都非常重视教职工的福利待遇，其中包括医疗保障。但为了更好地满足教职工的医疗需求，提升医疗保障水平，学校在2026年对补充医疗保险项目进行比选。补充医疗保险作为基本医疗保险的重要补充，其主要作用在于为教职工提供更全面、更充足的医疗保障。在基本医疗保险的基础上，补充医疗保险能够进一步减轻教职工因疾病带来的经济负担，确保他们在面临医疗风险时能够得到及时、有效的经济支持。为了确保补充医疗保险项目的顺利实施，学校将继续与专业的保险公司合作，确保保险服务的专业性和高效性。学校还将定期对保险项目进行评估和调整，以适应教职工的实际需求，确保每位教职工都能享受到最优质的医疗保障服务。具体要求见附件4&nbsp; &nbsp; &nbsp; 四、项目预算金额：55万以内。&nbsp; &nbsp; &nbsp; 五、资质要求：&nbsp; &nbsp; &nbsp;1.应为依法注册的公司，成立至今不低于1年，注册资金不低于二亿元；&nbsp; &nbsp; &nbsp;2.具有良好的商业信誉及健全的财务会计制度，须提上一年度财务审计报告复印件（或提供以下三项：财务报表、银行出具的资信证明材料复印件、近半年任意一个月的依法缴纳税收的证明（纳税凭证）复印件）；&nbsp; &nbsp; &nbsp;3.在同行业有较高知名度，未被列入“信用中国”网站(www.creditchina.gov.cn)记录失信被执行人。&nbsp; &nbsp; &nbsp;4.参选单位近三年（至比选日）无骗取中标、被限制投标、违约行为、重大责任事故承诺书（格式自拟）；&nbsp; &nbsp; &nbsp;六、报名：&nbsp; 1.报名时间：公告发布日至2025年11月21日&nbsp; 2.报名条件：具有相关资质证明&nbsp; 3.报名要求：报名时须携带①营业执照复印件；②法人授权委托书（格式见附件1，需附委托人及被委托人身份证复印件）；③上一年度财务审计报告复印件（或提供以下三项：财务报表、银行出具的资信证明材料复印件、近半年任意一个月的依法缴纳税收的证明（纳税凭证）复印件）；④未被列入“信用中国”网站(www.creditchina.gov.cn)记录失信被执行人查询结果；⑤参选人近三年（至比选日）无骗取中标、被限制投标、违约行为、重大责任事故承诺书（格式自拟）；⑥资质文件（如本公告资质要求处有明确要求，则需提供相应支撑材料）。（以上材料加盖公章）；&nbsp; 4.报名登记：参加报名时参选人需填写《比选报名登记表》（格式见附件2）并携带报名材料进行现场核查。&nbsp; &nbsp; &nbsp; &nbsp;七、响应文件编制、装订及密封&nbsp; 1.响应文件封面(注明比选项目名称、参选人单位名称及日期并加盖公章)。&nbsp; 2.响应报价（人民币：元；加盖公章）。&nbsp; 3.①营业执照复印件；②法人授权委托书（格式见附件1）；③上一年度财务审计报告复印件（或提供以下三项：财务报表、银行出具的资信证明材料复印件、近半年任意一个月的依法缴纳税收的证明（纳税凭证）复印件）；④未被列入“信用中国”网站(www.creditchina.gov.cn)记录失信被执行人查询结果；⑤参选人近三年（至比选日）无骗取中标、被限制投标、违约行为、重大责任事故承诺书（格式自拟）；⑥资质文件（如本公告资质要求处有明确要求，则需提供相应支撑材料）。&nbsp;4. 参选人按“1至5” 编制顺序将响应文件装订成册，并加盖骑缝章。&nbsp;5.响应文件需提供一正三副，并在封面标明“正本”和“副本”；&nbsp;6.装订成册的响应文件正、副本装入文件袋并用封条密封，在封条与文件袋接缝处加盖参选人公章，用“A4”纸打印比选项目名称，参选人单位名称、法定代表人或授权代理人签名、联系电话及日期等信息并粘贴在密封袋上。&nbsp; &nbsp; &nbsp; &nbsp;八、响应文件递交&nbsp; 1.响应文件递交时间：2025年11月21日上午8:30-9：00；&nbsp; 2.比选时间：2025年11月21日上午9:00；&nbsp; 3.地点：北京师范大学亚太实验学校。&nbsp; &nbsp; &nbsp;九、比选评选&nbsp; 1.学校成立比选小组；&nbsp; 2.本次采购采用综合评分法，即响应文件满足比选公告全部实质性要求通过资格核查且得分最高者确定为中选候选人。具体详见《比选评分表》（附件3）；&nbsp; 3.学校将在确定比选结果后5个工作日内在学校网站进行公示。&nbsp; &nbsp; &nbsp; 十、比选纪律&nbsp; 出现下列情况参选人将被永久列入黑名单：&nbsp; 1.成交候选人因自身原因未能按规定签订合同；&nbsp; 2.参选人采用不正当手段骗取中选；&nbsp; 3.其他违背相关法律法规的行为。&nbsp; &nbsp; &nbsp; 十一、其它&nbsp;凡对本次比选事宜提出询问的，请以邮件或电话的的形式与北京师范大学亚太实验学校联系：&nbsp; &nbsp; &nbsp; &nbsp;联系人：陈老师&nbsp; &nbsp; &nbsp; &nbsp;联系电话：18500359478&nbsp; &nbsp; &nbsp; &nbsp;邮箱地址：chenhao@bnuaps.net&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京师范大学亚太实验学校2025年11月19日
+										</span>
+									</div>
+									<div class="section_3"></div>
+									<div class="text_35 flex-row justify-between">
+										<div>查看详情</div>
+										<div>2025.11.19</div>
+									</div>
+								</div>
+							</a>
+							<a href="${getFullUrl('/tzgg/3759.jhtml')}">
+								<div class="group_10 flex-col">
+									<div class="box_21 flex-row">
+										<span class="paragraph_3">北京师范大学亚太实验学校2025-2026学年高年级班车带车服务项目比选公告</span>
+									</div>
+									<div class="box_22 flex-row">
+										<span class="paragraph_4">
+											本项目经校务会审批通过，拟通过比选方式确定服务供应商，现进行公告，符合条件的单位可报名参加比选。一、比选单位：&nbsp;北京师范大学亚太实验学校二、项目名称：&nbsp;高年级班车带车服务项目三、项目基本情况及要求：本项目旨在为乘坐高年级班车学生提供带车服务，服务期限为2025年12月1日-2026年8月31日，需要提供四名长期走读线路带车老师（服务线路为：绿色家园线、天通苑东1号线、天通苑东2号线、北苑线），费用根据实际出勤人数结算，另需临时带车老师（服务路线为所有中学走读线路和所有寄宿线路），费用根据临时带车需求，按次结算。带车老师需要每天提前到达发车点（上学的始发站和放学的始发站）等候学生上车，服务内容包括照看学生上下车及乘坐校车服务标准流程、学生沟通、家长沟通、信息发布和收集、学生管理、各种服务技能等。因此需要聘用带车老师，带车老师需接受培训，考核合格后方可上岗。具体要求：1、无犯罪记录；2、身心健康，无传染性疾病，无癫痫、精神病等可能危及行车安全的病史，无酗酒、吸毒行为记录；3、能正确使用车辆备品，掌握校车逃生应急技能；4、掌握校车行业知识，学习国务院颁发的《校车安全管理条例》，和北京市颁发的《北京市校车安全管理暂行规定》等政策法规，包括且不限于政策、法规、行业特点等。四、项目预算金额：人民币500000元以内五、资质要求：&nbsp;1.应为依法注册的公司，成立至今不低于3年，注册资金不低于500万；2.本项目不接受联合体投标；3.具有独立法人资格；六、报名、踏勘：1.报名时间：本公告发布日-2025年11月21日2.报名要求：报名时须携带①营业执照复印件；②法人授权委托书（格式见附件1，需附委托人及被委托人身份证复印件）；③上一年度财务审计报告复印件（或提供以下三项：财务报表、银行出具的资信证明材料复印件、近半年任意一个月的依法缴纳税收的证明（纳税凭证）复印件）；④未被列入“信用中国”网站(www.creditchina.gov.cn)记录失信被执行人查询结果；⑤参选单位近三年（至比选日）无骗取中标、被限制投标、违约行为、重大责任事故承诺书（格式自拟）；⑥资质文件（如本公告资质要求处有明确要求，则需提供相应支撑材料）。（以上材料加盖公章）；3.报名登记：参加报名时参选单位需填写《比选报名登记表》（格式见附件2）并携带六.2条中列示的报名材料进行现场核查。4.踏勘：参选单位自行踏勘，联系人及联系方式：高老师，010-69755033；七、响应文件编制、装订及密封1.响应文件封面(注明比选项目名称、参选单位单位名称及日期（参加比选会当天日期）并加盖公章)。2.响应报价（人民币：元；加盖公章，格式见附件4）。3.服务部分：服务的种类、范围、标准等4.①营业执照复印件；②法人授权委托书（格式见附件1）；③上一年度财务审计报告复印件（或提供以下三项：财务报表、银行出具的资信证明材料复印件、近半年任意一个月的依法缴纳税收的证明（纳税凭证）复印件）；④未被列入“信用中国”网站(www.creditchina.gov.cn)记录失信被执行人查询结果；⑤参选单位近三年（至比选日）无骗取中标、被限制投标、违约行为、重大责任事故承诺书（格式自拟）；⑥资质文件（如本公告资质要求处有明确要求，则需提供相应支撑材料）。5.附相关业绩明细并加盖公章，并提供合同关键信息或项目履约（验收）合格评价证明文件。6. 参选单位按“1至5” 编制顺序将响应文件装订成册，并加盖骑缝章。7.响应文件需提供一正三副，并在封面标明“正本”和“副本”；8.装订成册的响应文件正、副本装入文件袋并用封条密封，在封条与文件袋接缝处加盖参选单位公章，用“A4”纸打印比选项目名称，参选单位单位名称、法定代表人或授权代理人签名、联系电话及日期等信息并粘贴在密封袋上。八、响应文件递交1.响应文件递交时间：2025年11月24日上午8:30-9：00；2.比选时间：2025年11月24日上午9:30；3.地点：北京师范大学亚太实验学校。九、比选评选1.学校成立比选小组；2.&nbsp;本次采购采用综合评分法，即响应文件满足比选公告全部实质性要求通过资格核查且得分最高者确定为中选候选人。具体详见《比选评分表》（附件3）；3.学校将在确定比选结果后5个工作日内在学校网站进行公示。十、比选纪律出现下列情况参选单位将被永久列入黑名单：1.成交候选人因自身原因未能按规定签订合同；2.参选单位采用不正当手段骗取中选；3.其他违背相关法律法规的行为。十一、其它凡对本次比选事宜提出询问的，请以邮件或电话的的形式与北京师范大学亚太实验学校联系：联系人：高老师联系电话：010-69755033邮箱地址：yataijiaoyuchu@163.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京师范大学亚太实验学校2025年11月18日
+										</span>
+									</div>
+									<div class="section_3"></div>
+									<div class="text_35 flex-row justify-between">
+										<div>查看详情</div>
+										<div>2025.11.18</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="text-wrapper_6 flex-col">
+							<a class="text_23" rel="noopener noreferrer" href="${getFullUrl('/tzgg.jhtml')}">查看更多</a>
+						</div>
+					</div>
+					<img class="image_7" referrerpolicy="no-referrer" src="https://yatai-oss.yataischool.net/cms/u/cms/www/202304/02192235tccg.png">
+				</div>
+			</div>
+		</div>
+
+		<!-- 影像志模块 -->
+		<div id="m_gallery">
+			<div class="block_17">
+				<div class="block_container">
+					<div class="group_12 flex-col" style="background-image:url(https://yatai-oss.yataischool.net/cms/u/cms/www/202304/11155752nx3g.jpg)">
+						<div class="group_13 flex-col">
+							<div class="box_24 flex-row">
+								<div class="text-group_32">
+									<p class="text_43">影像志</p>
+									<p class="text_42">Image&nbsp;Chronicle</p>
+								</div>
+							</div>
+							<div class="swiper-2-box">
+								<div class="swiper-2">
+									<div class="swiper-wrapper" id="yxz-list-wrapper">
+										<!-- 影像志内容将通过AJAX加载 -->
+									</div>
+								</div>
+								<div class="swiper-button-next swiper-button-next-2"></div>
+								<div class="swiper-button-prev swiper-button-prev-2"></div>
+							</div>
+							<div class="box_26 flex-row">
+								<div class="text-wrapper_13 flex-col">
+									<a class="text_45" rel="noopener noreferrer" href="${getFullUrl('/yxz.jhtml')}">查看更多</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+	<!-- 快捷链接模块 -->
+	<div class="block_17">
+		<div class="block_container">
+			<div class="box_27 flex-row">
+				<div class="image-text_17 flex-row">
+					<img class="label_3" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_3.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_10" href="${getFullUrl('/xlview.jhtml')}">校历</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="label_4" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_4.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_11" href="${getFullUrl('/mzsp1.jhtml')}">每周菜单</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="image_2" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/image_2.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_12" href="${getFullUrl('/tszy1.jhtml')}">图书资源</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="label_6_1" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_7.png')}">
+					<a rel="noopener noreferrer" class="text-group_13" href="javascript:;">大脑课堂</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="label_5" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_5.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_13" href="">选课系统</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部导航 -->
+<link rel="stylesheet" type="text/css" href="${getFullUrl('/r/cms/www/default/css/footer.css')}?time=${new Date().getTime()}"/>
+<div class="footer">
+	<div class="footer_container">
+		<div class="box_9 flex-col">
+			<div class="group_17 flex-row">
+				<div class="section_15 flex-col">
+					<div class="image-text_21">
+						<img class="image_8" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/logo-ft.png')}">
+					</div>
+					<div class="text_52" style="margin-top: 15px;">
+						<span class="text_88">网址：</span>
+						<span class="text_89">www.yataischool.net</span>
+					</div>
+					<div class="text_52">地址：北京市昌平区北七家镇曹碾村西北</div>
+					<div class="text_52">媒体业务联络：微信号tyxdtt</div>
+					<div class="text_52">
+						<span class="text_90">招生电话：</span>
+						<span class="text_91">中学&nbsp;010-69759601/69759602/69759603/69759867</span>
+					</div>
+					<div class="text_52">
+						<span class="text_90"></span>
+						<span class="text_93">/69759868/69759869</span>
+					</div>
+					<div class="text_52">
+						<span class="text_90"></span>
+						<span class="text_93">幼小&nbsp;010-81939901/69758871/69758872/69758873</span>
+					</div>
+					<div class="text_52">
+						<span class="text_94">意见与监督电话：</span>
+						<span class="text_95">010-69755002</span>
+						<span class="text_96">（工作日</span>
+						<span class="text_97">9:00</span>
+						<span class="text_98">-</span>
+						<span class="text_99">17:00</span>
+						<span class="text_100">）</span>
+					</div>
+					<div class="text_52">
+						<span class="text_101">邮箱：</span>
+						<span class="text_102">yataixuexiao@bnuaps.net</span>
+					</div>
+					<div class="block_12 flex-col"></div>
+					<div class="group_19 flex-row">
+						<div class="text-group_33 flex-col justify-between">
+							<span class="text_52">Copyright&nbsp;©&nbsp;2023&nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;&nbsp;</span>
+							<div class="text_52">
+								<span class="text_103">北京师范大学亚太实验学校&nbsp;版权所有&nbsp;</span>
+								<a class="text_104" style="color: #fff;" href="https://beian.miit.gov.cn/">京 ICP备05038853</a>
+							</div>
+						</div>
+						<img class="label_6" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label-6.png')}">
+					</div>
+				</div>
+				<div style="height: 100%;">
+					<div class="text-group_34">
+						<div class="text_58">快速链接</div>
+						<div class="flex-col">
+							<span class="text_59">教师</span>
+							<a target="_blank" rel="noopener noreferrer" href="https://www.ttcdw.cn/h/spec/xcsjyxt/" class="text_60">北京市西城区教育党校</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://www.xcjyyxw.cn/" class="text_60">西城研修网</a>
+							<a target="_blank" rel="noopener noreferrer" href="http://jw.beijing.gov.cn/" class="text_60">北京市西城区教育委员会</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://cmis.bjedu.cn/#/login" class="text_60">北京市中小学学籍管理平台</a>
+						</div>
+						<div class="flex-col">
+							<span class="text_59">学生</span>
+							<a target="_blank" rel="noopener noreferrer" href="https://reading.smartedu.cn/" class="text_60">国家智慧教育读书平台</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://zhsz.bjedu.cn/web/login/index" class="text_60">学生综合素质评价平台</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://gzzp.bjedu.cn:9003/#/Login" class="text_60">北京市普通高中学生综合素质评价平台</a>
+						</div>
+					</div>
+				</div>
+				<div class="image_9_box">
+					<img class="image_9" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/image-9.png')}">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 收尾脚本 -->
+<script src="${getFullUrl('/r/cms/www/default/js/front.js')}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		console.log(new Date())
+		var date = new Date()
+		$(".new-date").html(date.getFullYear());
+		$(".blogroll").css("right",(405-(($(".blogroll").width())/2)));
+		$('.body-top-nav .link').on('mouseenter',function(){
+			$('.blogroll').show()
+		})
+		$('.body-top-nav .link').on('mouseleave',function(){
+			$('.blogroll').hide()
+		})
+		$('.blogroll').on('mouseleave',function(){
+			$('.blogroll').hide()
+		});
+		$('.statistics .clicks li').click(function(){
+			var index = $(this).index();
+			$('.statistics .clicks li a').removeClass('reds');
+			$(this).find('a').addClass('reds');
+			$(".statistics .click-content .quantity").eq(index).removeClass("none").siblings().addClass("none");
+		});
+	});
+	$(function () {
+		Cms.siteFlow(""); 
+	});
+</script>
+
+<!-- 模态框相关 -->
+<link href="${getFullUrl('/r/cms/www/default/css/select2.min.css')}" rel="stylesheet" />
+<style>
+  .btn-primary.confirm-btn {
+    background-color: #3E7C39;
+    border-color: #3E7C39;
+  }
+  .modal-header {
+    background-color: #3E7C39 !important;
+  }
+  .nd-content {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .modal-content {
+    border: 0px solid rgba(0, 0, 0, 0);
+  }
+  .modal-footer {
+    justify-content: center;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .modal-dialog {
+    margin: 12rem auto;
+  }
+  .m-dialog-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+</style>
+<div style="display:none;" class="btnlogin" id="btnSelectResume" data-toggle="modal" data-target="#pushResumeDialog">通知</div>
+<div id="tipPushResume"></div>
+<div class="modal fade" id="pushResumeDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color: white;">通 知</h5>
+        <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+      </div>
+      <div class="m-dialog-wrapper" id="dialog-wrapper">
+        <div class="modal-body">
+          <form>
+            <div id="dialogMessage" class="form-group nd-content"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary confirm-btn" id="confirmPushResume">点击查看</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="${getFullUrl('/r/cms/www/default/js/bootstrap-4.1.3.min.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/select2.full.min.js')}"></script>
+<script type="text/javascript">
+  function clickNotificationDialogButton (e) {
+    $.ajax({
+      type: 'get',
+      url: '${getFullUrl('/content/')}' + e,
+      cache: false,
+      processData: false,
+      async: false,
+      contentType: false,
+      headers: {
+        'JEECMS-Auth-Token': localStorage.getItem('JEECMS-Auth-Token')
+      },
+      success: function (result) {
+        if (result.code == 200 && result.data) {
+          window.location.href = result.data.attr.extraContent.value
+        }
+      },
+      error: function (xhr, textStatus, errorThrown) {}
+    })
+  }
+
+  $(document).ready(function () {
+    function getPageContent (channelIds) {
+      var page = 1
+      $.ajax({
+        type: 'get',
+        url: '${getFullUrl('/content/page')}?channelIds=' + channelIds + '&page=' + page,
+        cache: false,
+        processData: false,
+        async: true,
+        contentType: false,
+        headers: {
+          'JEECMS-Auth-Token': localStorage.getItem('JEECMS-Auth-Token')
+        },
+        success: function (result) {
+          if (result.code != 200) {
+            $("#pushResumeDialog").modal('hide')
+            return
+          }
+          var songNum = result.data.totalElements
+          if (result.data.content && result.data.content.length > 0) {
+            var htmlDialogList = ""
+            for (let i = 0; i < result.data.content.length; i++) {
+              const dialogModel = result.data.content[i]
+              htmlDialogList += '<div class="modal-body"><form><div id="dialogMessage" class="form-group nd-content">'
+              htmlDialogList += dialogModel.title
+              dialogButtonId = "confirmPushResume" + i
+              htmlDialogList += '</div></form></div><div class="modal-footer"><button type="button" class="btn btn-primary confirm-btn" id='
+              htmlDialogList += dialogButtonId
+              htmlDialogList += ' data-bid="' + dialogModel.id + '"'
+              htmlDialogList += ' onclick="clickNotificationDialogButton(' + dialogModel.id + ')"'
+              htmlDialogList += '>点击查看</button></div>'
+            }
+            $("#dialog-wrapper").html(htmlDialogList)
+            $("#pushResumeDialog").modal('show')
+          } else {
+            $("#pushResumeDialog").modal('hide')
+          }
+        },
+        error: function (xhr, textStatus, errorTh
+						 	<!-- 快捷链接模块 -->
+	<div class="block_17">
+		<div class="block_container">
+			<div class="box_27 flex-row">
+				<div class="image-text_17 flex-row">
+					<img class="label_3" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_3.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_10" href="${getFullUrl('/xlview.jhtml')}">校历</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="label_4" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_4.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_11" href="${getFullUrl('/mzsp1.jhtml')}">每周菜单</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="image_2" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/image_2.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_12" href="${getFullUrl('/tszy1.jhtml')}">图书资源</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="label_6_1" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_7.png')}">
+					<a rel="noopener noreferrer" class="text-group_13" href="javascript:;">大脑课堂</a>
+				</div>
+				<div class="image-text_18 flex-row">
+					<img class="label_5" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label_5.png')}">
+					<a target="_blank" rel="noopener noreferrer" class="text-group_13" href="">选课系统</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部导航 -->
+<link rel="stylesheet" type="text/css" href="${getFullUrl('/r/cms/www/default/css/footer.css')}?time=${new Date().getTime()}"/>
+<div class="footer">
+	<div class="footer_container">
+		<div class="box_9 flex-col">
+			<div class="group_17 flex-row">
+				<div class="section_15 flex-col">
+					<div class="image-text_21">
+						<img class="image_8" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/logo-ft.png')}">
+					</div>
+					<div class="text_52" style="margin-top: 15px;">
+						<span class="text_88">网址：</span>
+						<span class="text_89">www.yataischool.net</span>
+					</div>
+					<div class="text_52">地址：北京市昌平区北七家镇曹碾村西北</div>
+					<div class="text_52">媒体业务联络：微信号tyxdtt</div>
+					<div class="text_52">
+						<span class="text_90">招生电话：</span>
+						<span class="text_91">中学&nbsp;010-69759601/69759602/69759603/69759867</span>
+					</div>
+					<div class="text_52">
+						<span class="text_90"></span>
+						<span class="text_93">/69759868/69759869</span>
+					</div>
+					<div class="text_52">
+						<span class="text_90"></span>
+						<span class="text_93">幼小&nbsp;010-81939901/69758871/69758872/69758873</span>
+					</div>
+					<div class="text_52">
+						<span class="text_94">意见与监督电话：</span>
+						<span class="text_95">010-69755002</span>
+						<span class="text_96">（工作日</span>
+						<span class="text_97">9:00</span>
+						<span class="text_98">-</span>
+						<span class="text_99">17:00</span>
+						<span class="text_100">）</span>
+					</div>
+					<div class="text_52">
+						<span class="text_101">邮箱：</span>
+						<span class="text_102">yataixuexiao@bnuaps.net</span>
+					</div>
+					<div class="block_12 flex-col"></div>
+					<div class="group_19 flex-row">
+						<div class="text-group_33 flex-col justify-between">
+							<span class="text_52">Copyright&nbsp;©&nbsp;2023&nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;&nbsp;</span>
+							<div class="text_52">
+								<span class="text_103">北京师范大学亚太实验学校&nbsp;版权所有&nbsp;</span>
+								<a class="text_104" style="color: #fff;" href="https://beian.miit.gov.cn/">京 ICP备05038853</a>
+							</div>
+						</div>
+						<img class="label_6" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/label-6.png')}">
+					</div>
+				</div>
+				<div style="height: 100%;">
+					<div class="text-group_34">
+						<div class="text_58">快速链接</div>
+						<div class="flex-col">
+							<span class="text_59">教师</span>
+							<a target="_blank" rel="noopener noreferrer" href="https://www.ttcdw.cn/h/spec/xcsjyxt/" class="text_60">北京市西城区教育党校</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://www.xcjyyxw.cn/" class="text_60">西城研修网</a>
+							<a target="_blank" rel="noopener noreferrer" href="http://jw.beijing.gov.cn/" class="text_60">北京市西城区教育委员会</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://cmis.bjedu.cn/#/login" class="text_60">北京市中小学学籍管理平台</a>
+						</div>
+						<div class="flex-col">
+							<span class="text_59">学生</span>
+							<a target="_blank" rel="noopener noreferrer" href="https://reading.smartedu.cn/" class="text_60">国家智慧教育读书平台</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://zhsz.bjedu.cn/web/login/index" class="text_60">学生综合素质评价平台</a>
+							<a target="_blank" rel="noopener noreferrer" href="https://gzzp.bjedu.cn:9003/#/Login" class="text_60">北京市普通高中学生综合素质评价平台</a>
+						</div>
+					</div>
+				</div>
+				<div class="image_9_box">
+					<img class="image_9" referrerpolicy="no-referrer" src="${getFullUrl('/r/cms/www/default/images/index/image-9.png')}">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 收尾脚本 -->
+<script src="${getFullUrl('/r/cms/www/default/js/front.js')}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		console.log(new Date())
+		var date = new Date()
+		$(".new-date").html(date.getFullYear());
+		$(".blogroll").css("right",(405-(($(".blogroll").width())/2)));
+		$('.body-top-nav .link').on('mouseenter',function(){
+			$('.blogroll').show()
+		})
+		$('.body-top-nav .link').on('mouseleave',function(){
+			$('.blogroll').hide()
+		})
+		$('.blogroll').on('mouseleave',function(){
+			$('.blogroll').hide()
+		});
+		$('.statistics .clicks li').click(function(){
+			var index = $(this).index();
+			$('.statistics .clicks li a').removeClass('reds');
+			$(this).find('a').addClass('reds');
+			$(".statistics .click-content .quantity").eq(index).removeClass("none").siblings().addClass("none");
+		});
+	});
+	$(function () {
+		Cms.siteFlow(""); 
+	});
+</script>
+
+<!-- 模态框相关 -->
+<link href="${getFullUrl('/r/cms/www/default/css/select2.min.css')}" rel="stylesheet" />
+<style>
+  .btn-primary.confirm-btn {
+    background-color: #3E7C39;
+    border-color: #3E7C39;
+  }
+  .modal-header {
+    background-color: #3E7C39 !important;
+  }
+  .nd-content {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .modal-content {
+    border: 0px solid rgba(0, 0, 0, 0);
+  }
+  .modal-footer {
+    justify-content: center;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .modal-dialog {
+    margin: 12rem auto;
+  }
+  .m-dialog-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+</style>
+<div style="display:none;" class="btnlogin" id="btnSelectResume" data-toggle="modal" data-target="#pushResumeDialog">通知</div>
+<div id="tipPushResume"></div>
+<div class="modal fade" id="pushResumeDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color: white;">通 知</h5>
+        <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+      </div>
+      <div class="m-dialog-wrapper" id="dialog-wrapper">
+        <div class="modal-body">
+          <form>
+            <div id="dialogMessage" class="form-group nd-content"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary confirm-btn" id="confirmPushResume">点击查看</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="${getFullUrl('/r/cms/www/default/js/bootstrap-4.1.3.min.js')}"></script>
+<script src="${getFullUrl('/r/cms/www/default/js/select2.full.min.js')}"></script>
+<script type="text/javascript">
+  function clickNotificationDialogButton (e) {
+    $.ajax({
+      type: 'get',
+      url: '${getFullUrl('/content/')}' + e,
+      cache: false,
+      processData: false,
+      async: false,
+      contentType: false,
+      headers: {
+        'JEECMS-Auth-Token': localStorage.getItem('JEECMS-Auth-Token')
+      },
+      success: function (result) {
+        if (result.code == 200 && result.data) {
+          window.location.href = result.data.attr.extraContent.value
+        }
+      },
+      error: function (xhr, textStatus, errorThrown) {}
+    })
+  }
+
+  $(document).ready(function () {
+    function getPageContent (channelIds) {
+      var page = 1
+      $.ajax({
+        type: 'get',
+        url: '${getFullUrl('/content/page')}?channelIds=' + channelIds + '&page=' + page,
+        cache: false,
+        processData: false,
+        async: true,
+        contentType: false,
+        headers: {
+          'JEECMS-Auth-Token': localStorage.getItem('JEECMS-Auth-Token')
+        },
+        success: function (result) {
+          if (result.code != 200) {
+            $("#pushResumeDialog").modal('hide')
+            return
+          }
+          var songNum = result.data.totalElements
+          if (result.data.content && result.data.content.length > 0) {
+            var htmlDialogList = ""
+            for (let i = 0; i < result.data.content.length; i++) {
+              const dialogModel = result.data.content[i]
+              htmlDialogList += '<div class="modal-body"><form><div id="dialogMessage" class="form-group nd-content">'
+              htmlDialogList += dialogModel.title
+              dialogButtonId = "confirmPushResume" + i
+              htmlDialogList += '</div></form></div><div class="modal-footer"><button type="button" class="btn btn-primary confirm-btn" id='
+              htmlDialogList += dialogButtonId
+              htmlDialogList += ' data-bid="' + dialogModel.id + '"'
+              htmlDialogList += ' onclick="clickNotificationDialogButton(' + dialogModel.id + ')"'
+              htmlDialogList += '>点击查看</button></div>'
+            }
+            $("#dialog-wrapper").html(htmlDialogList)
+            $("#pushResumeDialog").modal('show')
+          } else {
+            $("#pushResumeDialog").modal('hide')
+          }
+        },
+        error: function (xhr, textStatus, errorThrown) {}
+      })
+    }
+  })
+</script>
 </body>
 </html>
-					
